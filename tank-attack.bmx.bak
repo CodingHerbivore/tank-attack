@@ -256,7 +256,7 @@ Function UpdateTanks(mapData:TList, tankList:TList)
 			If x >= 32 And x <= 768
 				t.X = x
 			End If
-			If y >= 32 And x <= 568
+			If y >= 32 And y <= 568
 				t.Y = y
 			End If
 		End If
@@ -344,9 +344,11 @@ Function DrawSplash:Int()
 		SetColor 0, 255, 192
 		PrintMessage "PLAYER WITH HIGHEST", 400, 292, True
 		PrintMessage "SCORE WINS", 400, 324, True
+		
 		SetColor 255, 0, 0
 		PrintMessage "PRESS A B OR C FOR MAP", 400, 492, True
-		PrintMessage "ESCAPE TO QUIT TO OS", 400, 524, True
+		PrintMessage "Z FOR INSTRUCTIONS", 400, 524, True
+		PrintMessage "ESCAPE TO QUIT TO OS", 400, 556, True
 		
 		Flip
 		If KeyDown(KEY_A)
@@ -355,8 +357,41 @@ Function DrawSplash:Int()
 			retVal = 2
 		Else If KeyDown(KEY_C)
 			retVal = 3
+		Else If KeyDown(KEY_Z)
+			retVal = 98
 		Else If KeyDown(KEY_ESCAPE)
 			retVal = 99
+		End If
+	Wend
+	FlushKeys
+	Return retVal
+End Function
+
+Function InstructionsPage:Int()
+	Local retVal:Int = 1
+	
+	While retVal = 1
+		Cls
+		SetColor 255, 255, 255
+		PrintMessage "Tank Attack", 400, 32, True
+		SetColor 255, 192, 0
+		PrintMessage "A GAME FOR TWO PLAYERS", 400, 96, True
+		SetColor 255, 255, 255
+		PrintMessage "Player one uses the W key to drive forward,", 400, 228, True
+		PrintMessage "the A key to turn left, and the D key to turn right.", 400, 238, True
+		PrintMessage "Player one shoots with the S key.", 400, 248, True
+		PrintMessage "Player two uses the UP Arrow key to drive forward,", 400, 278, True
+		PrintMessage "the LEFT ARROW key to turn left, and the RIGHT ARROW key to turn right.", 400, 288, True
+		PrintMessage "Player two shoots with the M key.", 400, 298, True
+		
+		
+		SetColor 255, 0, 0
+		PrintMessage "PRESS ENTER TO RETURN TO THE MAIN SCREEN", 400, 492, True
+		PrintMessage "ESCAPE TO QUIT TO OS", 400, 524, True
+		
+		Flip
+		If KeyDown(KEY_ENTER)
+			retVal = 0
 		End If
 	Wend
 	FlushKeys
@@ -398,12 +433,24 @@ Local state:Int = 0
 Local quit:Int = 0
 Local currentLevel:Int = 0
 
+	Rem
+		
+		I'm thinking to add an instructions page, I need to set a new currentLevel,
+		then have that currentLevel return a new state, which leads to a instructionsPage function.
+		The instructionsPage function would then return a state of 0, in other words returning the 
+		player to the splash page.
+		
+	EndRem
+
 While Not quit
 	Select state
 	Case 0
 		currentLevel = DrawSplash()
 		If currentLevel = 99
 			quit = True
+		Else If currentLevel = 98
+			' Hoping to add instructions page
+			state = 3
 		Else
 			state = 1
 		End If
@@ -412,5 +459,7 @@ While Not quit
 		If state = 2
 			quit = True
 		End If
+	Case 3
+		state = InstructionsPage()
 	End Select
 Wend

@@ -1,5 +1,5 @@
 #include "tank-attack.bmx.gui.release.win32.x86.h"
-static BBString _s29={
+static BBString _s30={
 	&bbStringClass,
 	0xeb686b27bc9822a,
 	1,
@@ -42,7 +42,7 @@ static BBString _s1={
 	,97,100,121,32,101,120,105,115,116,115,32,105,110,32,116,104
 	,101,32,109,97,112}
 };
-static BBString _s24={
+static BBString _s25={
 	&bbStringClass,
 	0xca5415e97db26afb,
 	20,
@@ -56,7 +56,7 @@ static BBString _s19={
 	{70,73,71,72,84,32,84,79,32,84,72,69,32,68,69,65,84
 	,72,32,73,78}
 };
-static BBString _s25={
+static BBString _s26={
 	&bbStringClass,
 	0xf10ab0b1e1a8de25,
 	13,
@@ -75,14 +75,14 @@ static BBString _s20={
 	{78,73,78,69,84,89,45,78,73,78,69,32,83,69,67,79,78
 	,68,83}
 };
-static BBString _s26={
+static BBString _s27={
 	&bbStringClass,
 	0xb1fb57f6d4b4c355,
 	22,
 	{80,76,65,89,69,82,32,49,32,73,83,32,84,72,69,32,87
 	,73,78,78,69,82}
 };
-static BBString _s27={
+static BBString _s28={
 	&bbStringClass,
 	0xbc7e99982459a07a,
 	22,
@@ -103,7 +103,7 @@ static BBString _s23={
 	{80,82,69,83,83,32,65,32,66,32,79,82,32,67,32,70,79
 	,82,32,77,65,80}
 };
-static BBString _s28={
+static BBString _s29={
 	&bbStringClass,
 	0x64f42c75acd78870,
 	21,
@@ -141,6 +141,13 @@ static BBString _s16={
 	0x8d665dbd410d5ada,
 	1,
 	{88}
+};
+static BBString _s24={
+	&bbStringClass,
+	0xaf1300e721569c38,
+	18,
+	{90,32,70,79,82,32,73,78,83,84,82,85,67,84,73,79,78
+	,83}
 };
 static BBString _s11={
 	&bbStringClass,
@@ -230,6 +237,7 @@ BBINT _m_tank_attack_DrawSplash(){
 		brl_max2d_SetColor(255,0,0);
 		_m_tank_attack_PrintMessage(&_s23,400,492,1);
 		_m_tank_attack_PrintMessage(&_s24,400,524,1);
+		_m_tank_attack_PrintMessage(&_s25,400,556,1);
 		brl_graphics_Flip(-1);
 		if(brl_polledinput_KeyDown(65)!=0){
 			bbt_retVal=1;
@@ -305,7 +313,7 @@ struct brl_linkedlist_TList_obj* _m_tank_attack_GetMapData(BBSTRING bbt_filename
 	struct brl_stream_TStream_obj* bbt_file=(struct brl_stream_TStream_obj*)brl_filesystem_OpenFile((BBOBJECT)bbt_filename,1,0);
 	while(!(brl_stream_Eof((struct brl_stream_TStream_obj*)bbt_file)!=0)){
 		BBSTRING bbt_line=brl_stream_ReadLine((struct brl_stream_TStream_obj*)bbt_file);
-		BBARRAY bbt_cells=bbStringSplit((BBSTRING)bbt_line,&_s29);
+		BBARRAY bbt_cells=bbStringSplit((BBSTRING)bbt_line,&_s30);
 		{
 			BBINT bbt_x2=0;
 			BBINT bbt_=((bbt_cells->scales[0])-1);
@@ -734,17 +742,17 @@ BBINT _m_tank_attack_DrawEndGame(struct _m_tank_attack_TTank_obj* bbt_p1,struct 
 		_m_tank_attack_PrintMessage(&_s17,400,32,1);
 		brl_max2d_SetColor(255,255,255);
 		if(bbt_p1->__m_tank_attack_ttank_score ==bbt_p2->__m_tank_attack_ttank_score ){
-			_m_tank_attack_PrintMessage(&_s25,400,228,1);
+			_m_tank_attack_PrintMessage(&_s26,400,228,1);
 		}else{
 			if(bbt_p1->__m_tank_attack_ttank_score >bbt_p2->__m_tank_attack_ttank_score ){
-				_m_tank_attack_PrintMessage(&_s26,400,228,1);
-			}else{
 				_m_tank_attack_PrintMessage(&_s27,400,228,1);
+			}else{
+				_m_tank_attack_PrintMessage(&_s28,400,228,1);
 			}
 		}
 		brl_max2d_SetColor(255,0,0);
-		_m_tank_attack_PrintMessage(&_s28,400,492,1);
-		_m_tank_attack_PrintMessage(&_s24,400,524,1);
+		_m_tank_attack_PrintMessage(&_s29,400,492,1);
+		_m_tank_attack_PrintMessage(&_s25,400,524,1);
 		brl_graphics_Flip(-1);
 		if(brl_polledinput_KeyDown(80)!=0){
 			bbt_retVal=1;

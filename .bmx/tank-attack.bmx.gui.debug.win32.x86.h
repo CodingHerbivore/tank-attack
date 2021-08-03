@@ -162,5 +162,6 @@ BBINT _m_tank_attack_DrawNumber(BBINT bbt_x,BBINT bbt_number,BBINT bbt_offsetLef
 BBINT _m_tank_attack_DrawInformation(struct brl_linkedlist_TList_obj* bbt_tankList,BBINT bbt_countDown);
 BBINT _m_tank_attack_DrawEndGame(struct _m_tank_attack_TTank_obj* bbt_p1,struct _m_tank_attack_TTank_obj* bbt_p2);
 BBINT _m_tank_attack_MainGameLoop(BBINT bbt_currentLevel);
+BBINT _m_tank_attack_InstructionsPage();
 
 #endif
