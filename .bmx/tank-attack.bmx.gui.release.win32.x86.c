@@ -1,5 +1,5 @@
 #include "tank-attack.bmx.gui.release.win32.x86.h"
-static BBString _s30={
+static BBString _s37={
 	&bbStringClass,
 	0xeb686b27bc9822a,
 	1,
@@ -56,7 +56,7 @@ static BBString _s19={
 	{70,73,71,72,84,32,84,79,32,84,72,69,32,68,69,65,84
 	,72,32,73,78}
 };
-static BBString _s26={
+static BBString _s33={
 	&bbStringClass,
 	0xf10ab0b1e1a8de25,
 	13,
@@ -75,14 +75,14 @@ static BBString _s20={
 	{78,73,78,69,84,89,45,78,73,78,69,32,83,69,67,79,78
 	,68,83}
 };
-static BBString _s27={
+static BBString _s34={
 	&bbStringClass,
 	0xb1fb57f6d4b4c355,
 	22,
 	{80,76,65,89,69,82,32,49,32,73,83,32,84,72,69,32,87
 	,73,78,78,69,82}
 };
-static BBString _s28={
+static BBString _s35={
 	&bbStringClass,
 	0xbc7e99982459a07a,
 	22,
@@ -103,12 +103,53 @@ static BBString _s23={
 	{80,82,69,83,83,32,65,32,66,32,79,82,32,67,32,70,79
 	,82,32,77,65,80}
 };
-static BBString _s29={
+static BBString _s32={
+	&bbStringClass,
+	0x699b8ad4a6a48676,
+	40,
+	{80,82,69,83,83,32,69,78,84,69,82,32,84,79,32,82,69
+	,84,85,82,78,32,84,79,32,84,72,69,32,77,65,73,78
+	,32,83,67,82,69,69,78}
+};
+static BBString _s36={
 	&bbStringClass,
 	0x64f42c75acd78870,
 	21,
 	{80,82,69,83,83,32,80,32,84,79,32,80,76,65,89,32,65
 	,71,65,73,78}
+};
+static BBString _s28={
+	&bbStringClass,
+	0xd6706d6812732d85,
+	33,
+	{80,108,97,121,101,114,32,111,110,101,32,115,104,111,111,116,115
+	,32,119,105,116,104,32,116,104,101,32,83,32,107,101,121,46
+}
+};
+static BBString _s26={
+	&bbStringClass,
+	0xf0497909d5dcef94,
+	43,
+	{80,108,97,121,101,114,32,111,110,101,32,117,115,101,115,32,116
+	,104,101,32,87,32,107,101,121,32,116,111,32,100,114,105,118
+	,101,32,102,111,114,119,97,114,100,44}
+};
+static BBString _s31={
+	&bbStringClass,
+	0xd7a1492b14ae8048,
+	33,
+	{80,108,97,121,101,114,32,116,119,111,32,115,104,111,111,116,115
+	,32,119,105,116,104,32,116,104,101,32,77,32,107,101,121,46
+}
+};
+static BBString _s29={
+	&bbStringClass,
+	0xe82eee0cd174e665,
+	50,
+	{80,108,97,121,101,114,32,116,119,111,32,117,115,101,115,32,116
+	,104,101,32,85,80,32,65,114,114,111,119,32,107,101,121,32
+	,116,111,32,100,114,105,118,101,32,102,111,114,119,97,114,100
+	,44}
 };
 static BBString _s22={
 	&bbStringClass,
@@ -207,6 +248,25 @@ static BBString _s12={
 	8,
 	{116,97,110,107,46,112,110,103}
 };
+static BBString _s27={
+	&bbStringClass,
+	0x38f7849239da3f48,
+	52,
+	{116,104,101,32,65,32,107,101,121,32,116,111,32,116,117,114,110
+	,32,108,101,102,116,44,32,97,110,100,32,116,104,101,32,68
+	,32,107,101,121,32,116,111,32,116,117,114,110,32,114,105,103
+	,104,116,46}
+};
+static BBString _s30={
+	&bbStringClass,
+	0xd9db9e4714490fce,
+	71,
+	{116,104,101,32,76,69,70,84,32,65,82,82,79,87,32,107,101
+	,121,32,116,111,32,116,117,114,110,32,108,101,102,116,44,32
+	,97,110,100,32,116,104,101,32,82,73,71,72,84,32,65,82
+	,82,79,87,32,107,101,121,32,116,111,32,116,117,114,110,32
+	,114,105,103,104,116,46}
+};
 struct BBDebugScope_14{int kind; const char *name; BBDebugDecl decls[15]; };
 struct BBDebugScope_3{int kind; const char *name; BBDebugDecl decls[4]; };
 struct BBDebugScope_5{int kind; const char *name; BBDebugDecl decls[6]; };
@@ -248,8 +308,12 @@ BBINT _m_tank_attack_DrawSplash(){
 				if(brl_polledinput_KeyDown(67)!=0){
 					bbt_retVal=3;
 				}else{
-					if(brl_polledinput_KeyDown(27)!=0){
-						bbt_retVal=99;
+					if(brl_polledinput_KeyDown(90)!=0){
+						bbt_retVal=98;
+					}else{
+						if(brl_polledinput_KeyDown(27)!=0){
+							bbt_retVal=99;
+						}
 					}
 				}
 			}
@@ -313,7 +377,7 @@ struct brl_linkedlist_TList_obj* _m_tank_attack_GetMapData(BBSTRING bbt_filename
 	struct brl_stream_TStream_obj* bbt_file=(struct brl_stream_TStream_obj*)brl_filesystem_OpenFile((BBOBJECT)bbt_filename,1,0);
 	while(!(brl_stream_Eof((struct brl_stream_TStream_obj*)bbt_file)!=0)){
 		BBSTRING bbt_line=brl_stream_ReadLine((struct brl_stream_TStream_obj*)bbt_file);
-		BBARRAY bbt_cells=bbStringSplit((BBSTRING)bbt_line,&_s30);
+		BBARRAY bbt_cells=bbStringSplit((BBSTRING)bbt_line,&_s37);
 		{
 			BBINT bbt_x2=0;
 			BBINT bbt_=((bbt_cells->scales[0])-1);
@@ -742,16 +806,16 @@ BBINT _m_tank_attack_DrawEndGame(struct _m_tank_attack_TTank_obj* bbt_p1,struct 
 		_m_tank_attack_PrintMessage(&_s17,400,32,1);
 		brl_max2d_SetColor(255,255,255);
 		if(bbt_p1->__m_tank_attack_ttank_score ==bbt_p2->__m_tank_attack_ttank_score ){
-			_m_tank_attack_PrintMessage(&_s26,400,228,1);
+			_m_tank_attack_PrintMessage(&_s33,400,228,1);
 		}else{
 			if(bbt_p1->__m_tank_attack_ttank_score >bbt_p2->__m_tank_attack_ttank_score ){
-				_m_tank_attack_PrintMessage(&_s27,400,228,1);
+				_m_tank_attack_PrintMessage(&_s34,400,228,1);
 			}else{
-				_m_tank_attack_PrintMessage(&_s28,400,228,1);
+				_m_tank_attack_PrintMessage(&_s35,400,228,1);
 			}
 		}
 		brl_max2d_SetColor(255,0,0);
-		_m_tank_attack_PrintMessage(&_s29,400,492,1);
+		_m_tank_attack_PrintMessage(&_s36,400,492,1);
 		_m_tank_attack_PrintMessage(&_s25,400,524,1);
 		brl_graphics_Flip(-1);
 		if(brl_polledinput_KeyDown(80)!=0){
@@ -792,6 +856,32 @@ BBINT _m_tank_attack_MainGameLoop(BBINT bbt_currentLevel){
 		bbt_result=_m_tank_attack_DrawEndGame((struct _m_tank_attack_TTank_obj*)bbt_player1,(struct _m_tank_attack_TTank_obj*)bbt_player2);
 	}
 	return bbt_result;
+}
+BBINT _m_tank_attack_InstructionsPage(){
+	BBINT bbt_retVal=1;
+	while(bbt_retVal==1){
+		brl_max2d_Cls();
+		brl_max2d_SetColor(255,255,255);
+		_m_tank_attack_PrintMessage(&_s17,400,32,1);
+		brl_max2d_SetColor(255,192,0);
+		_m_tank_attack_PrintMessage(&_s18,400,96,1);
+		brl_max2d_SetColor(255,255,255);
+		_m_tank_attack_PrintMessage(&_s26,400,228,1);
+		_m_tank_attack_PrintMessage(&_s27,400,248,1);
+		_m_tank_attack_PrintMessage(&_s28,400,268,1);
+		_m_tank_attack_PrintMessage(&_s29,400,308,1);
+		_m_tank_attack_PrintMessage(&_s30,400,328,1);
+		_m_tank_attack_PrintMessage(&_s31,400,348,1);
+		brl_max2d_SetColor(255,0,0);
+		_m_tank_attack_PrintMessage(&_s32,400,492,1);
+		_m_tank_attack_PrintMessage(&_s25,400,524,1);
+		brl_graphics_Flip(-1);
+		if(brl_polledinput_KeyDown(13)!=0){
+			bbt_retVal=0;
+		}
+	}
+	brl_polledinput_FlushKeys(1);
+	return bbt_retVal;
 }
 static int _bb_main_inited = 0;
 int _bb_main(){
@@ -867,13 +957,21 @@ int _bb_main(){
 				if(bbt_currentLevel==99){
 					bbt_quit=1;
 				}else{
-					bbt_state=1;
+					if(bbt_currentLevel==98){
+						bbt_state=3;
+					}else{
+						bbt_state=1;
+					}
 				}
 			}else{
 				if(bbt_==1){
 					bbt_state=_m_tank_attack_MainGameLoop(bbt_currentLevel);
 					if(bbt_state==2){
 						bbt_quit=1;
+					}
+				}else{
+					if(bbt_==3){
+						bbt_state=_m_tank_attack_InstructionsPage();
 					}
 				}
 			}

@@ -91,6 +91,7 @@ DrawNumber%(x%,number%,offsetLeft%)="_m_tank_attack_DrawNumber"
 DrawInformation%(tankList:TList,countDown%)="_m_tank_attack_DrawInformation"
 DrawEndGame%(p1:TTank,p2:TTank)="_m_tank_attack_DrawEndGame"
 MainGameLoop%(currentLevel%)="_m_tank_attack_MainGameLoop"
+InstructionsPage%()="_m_tank_attack_InstructionsPage"
 brick:TImage&=mem:p("_m_tank_attack_brick")
 tankImage:TImage&=mem:p("_m_tank_attack_tankImage")
 bulletImage:TImage&=mem:p("_m_tank_attack_bulletImage")
