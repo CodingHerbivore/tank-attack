@@ -8,6 +8,8 @@ Global bulletImage:TImage = LoadImage("bullet.png")
 MidHandleImage(tankImage)
 MidHandleImage(bulletImage)
 
+
+' Setup our types
 Type TVector2
 	Field X:Float
 	Field Y:Float
@@ -44,13 +46,14 @@ Type TTank
 	Field rotRightKey:Int
 	Field rotLeftKey:Int
 	Field forwardKey:Int
+	Field reverseKey:Int
 	Field fireKey:Int
 	
 	Field Bullet:TBullet
 	
 	Field Score:Int
 	
-	Function Create:TTank(x:Int, y:Int, r:Int, g:Int, b:Int, rotLeft:Int, rotRight:Int, forward:Int, fire:Int)
+	Function Create:TTank(x:Int, y:Int, r:Int, g:Int, b:Int, rotLeft:Int, rotRight:Int, forward:Int, fire:Int, reverse:Int)
 		Local tank:TTank = New TTank
 		tank.X = x
 		tank.Y = y
@@ -62,6 +65,7 @@ Type TTank
 		tank.rotRightKey = rotRight
 		tank.rotLeftKey = rotLeft
 		tank.forwardKey = forward
+		tank.reverseKey = reverse
 		tank.fireKey = fire
 		
 		tank.Bullet = New TBullet
@@ -248,8 +252,33 @@ Function UpdateTanks(mapData:TList, tankList:TList)
 		If KeyDown(t.forwardKey)
 			Local x:Float = t.X
 			Local y:Float = t.Y
+			
 			x = x + (3.14/2.0 * Sin(t.Rotation))
 			y = y - (3.14/2.0 * Cos(t.Rotation))
+			
+			If IsCrashWithBricks(mapData, tankImage, x, y)
+				Continue
+			End If
+			
+			Rem
+				According To the book, I think these are tests For screen bounds
+				Not necessary except for maps without a border
+			End Rem
+		
+			If x >= 32 And x <= 768
+				t.X = x
+			End If
+			If y >= 32 And y <= 568
+				t.Y = y
+			End If
+		End If
+		
+		' Add a way to back the tank up at the urging of my wife
+		If KeyDown(t.reverseKey)
+			Local x:Float = t.X
+			Local y:Float = t.Y
+			x = x - (3.14/2.0 * Sin(t.Rotation))
+			y = y + (3.14/2.0 * Cos(t.Rotation))
 			If IsCrashWithBricks(mapData, tankImage, x, y)
 				Continue
 			End If
@@ -302,8 +331,8 @@ Function MainGameLoop:Int(currentLevel:Int)
 	Local countDown:Int = 99
 	Local mapData:TList = LoadMap(currentLevel)
 	Local tankList:TList = CreateList()
-	Local player1:TTank = TTank.Create(64, 300, 255, 0, 0, KEY_A, KEY_D, KEY_W, KEY_S)
-	Local player2:TTank = TTank.Create(704, 300, 0, 0, 255, KEY_LEFT, KEY_RIGHT, KEY_UP, KEY_M)
+	Local player1:TTank = TTank.Create(64, 300, 255, 0, 0, KEY_A, KEY_D, KEY_W, KEY_E, KEY_S)
+	Local player2:TTank = TTank.Create(704, 300, 0, 0, 255, KEY_LEFT, KEY_RIGHT, KEY_UP, KEY_M, KEY_DOWN)
 	ListAddLast(tankList, player1)
 	ListAddLast(tankList, player2)
 	
@@ -367,6 +396,7 @@ Function DrawSplash:Int()
 	Return retVal
 End Function
 
+' I figured it would be a very good idea to add an instructions page.
 Function InstructionsPage:Int()
 	Local retVal:Int = 1
 	
@@ -377,10 +407,10 @@ Function InstructionsPage:Int()
 		SetColor 255, 192, 0
 		PrintMessage "A GAME FOR TWO PLAYERS", 400, 96, True
 		SetColor 255, 255, 255
-		PrintMessage "Player one uses the W key to drive forward,", 400, 228, True
+		PrintMessage "Player one uses the W key to drive forward, S to drive backward,", 400, 228, True
 		PrintMessage "the A key to turn left, and the D key to turn right.", 400, 248, True
-		PrintMessage "Player one shoots with the S key.", 400, 268, True
-		PrintMessage "Player two uses the UP Arrow key to drive forward,", 400, 308, True
+		PrintMessage "Player one shoots with the E key.", 400, 268, True
+		PrintMessage "Player two uses the UP ARROW key to drive forward, the DOWN ARROW key to drive backward,", 400, 308, True
 		PrintMessage "the LEFT ARROW key to turn left, and the RIGHT ARROW key to turn right.", 400, 328, True
 		PrintMessage "Player two shoots with the M key.", 400, 348, True
 		

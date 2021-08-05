@@ -120,19 +120,20 @@ static BBString _s36={
 };
 static BBString _s28={
 	&bbStringClass,
-	0xd6706d6812732d85,
+	0xe7ea8f12183b7405,
 	33,
 	{80,108,97,121,101,114,32,111,110,101,32,115,104,111,111,116,115
-	,32,119,105,116,104,32,116,104,101,32,83,32,107,101,121,46
+	,32,119,105,116,104,32,116,104,101,32,69,32,107,101,121,46
 }
 };
 static BBString _s26={
 	&bbStringClass,
-	0xf0497909d5dcef94,
-	43,
+	0x3c28fb3a17de65c1,
+	64,
 	{80,108,97,121,101,114,32,111,110,101,32,117,115,101,115,32,116
 	,104,101,32,87,32,107,101,121,32,116,111,32,100,114,105,118
-	,101,32,102,111,114,119,97,114,100,44}
+	,101,32,102,111,114,119,97,114,100,44,32,83,32,116,111,32
+	,100,114,105,118,101,32,98,97,99,107,119,97,114,100,44}
 };
 static BBString _s31={
 	&bbStringClass,
@@ -144,12 +145,14 @@ static BBString _s31={
 };
 static BBString _s29={
 	&bbStringClass,
-	0xe82eee0cd174e665,
-	50,
+	0x4716fb4a67adcf15,
+	88,
 	{80,108,97,121,101,114,32,116,119,111,32,117,115,101,115,32,116
-	,104,101,32,85,80,32,65,114,114,111,119,32,107,101,121,32
+	,104,101,32,85,80,32,65,82,82,79,87,32,107,101,121,32
 	,116,111,32,100,114,105,118,101,32,102,111,114,119,97,114,100
-	,44}
+	,44,32,116,104,101,32,68,79,87,78,32,65,82,82,79,87
+	,32,107,101,121,32,116,111,32,100,114,105,118,101,32,98,97
+	,99,107,119,97,114,100,44}
 };
 static BBString _s22={
 	&bbStringClass,
@@ -268,8 +271,8 @@ static BBString _s30={
 	,114,105,103,104,116,46}
 };
 struct BBDebugScope_1{int kind; const char *name; BBDebugDecl decls[2]; };
-struct BBDebugScope_10{int kind; const char *name; BBDebugDecl decls[11]; };
-struct BBDebugScope_14{int kind; const char *name; BBDebugDecl decls[15]; };
+struct BBDebugScope_11{int kind; const char *name; BBDebugDecl decls[12]; };
+struct BBDebugScope_15{int kind; const char *name; BBDebugDecl decls[16]; };
 struct BBDebugScope_2{int kind; const char *name; BBDebugDecl decls[3]; };
 struct BBDebugScope_3{int kind; const char *name; BBDebugDecl decls[4]; };
 struct BBDebugScope_4{int kind; const char *name; BBDebugDecl decls[5]; };
@@ -312,7 +315,7 @@ BBINT _m_tank_attack_PrintMessage(BBSTRING bbt_s,BBINT bbt_x,BBINT bbt_y,BBINT b
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 144, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 148, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	if(bbt_centre!=0){
 		struct BBDebugScope __scope = {
@@ -323,12 +326,12 @@ BBINT _m_tank_attack_PrintMessage(BBSTRING bbt_s,BBINT bbt_x,BBINT bbt_y,BBINT b
 			}
 		};
 		bbOnDebugEnterScope(&__scope);
-		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 145, 0};
+		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 149, 0};
 		bbOnDebugEnterStm(&__stmt_0);
 		bbt_x=(bbt_x-(brl_max2d_TextWidth(bbt_s)/2));
 		bbOnDebugLeaveScope();
 	}
-	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 147, 0};
+	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 151, 0};
 	bbOnDebugEnterStm(&__stmt_1);
 	brl_max2d_DrawText(bbt_s,((BBFLOAT)bbt_x),((BBFLOAT)bbt_y));
 	bbOnDebugLeaveScope();
@@ -350,10 +353,10 @@ BBINT _m_tank_attack_DrawSplash(){
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 333, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 353, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	bbt_retVal=0;
-	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 335, 0};
+	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 355, 0};
 	bbOnDebugEnterStm(&__stmt_1);
 	while(bbt_retVal==0){
 		struct BBDebugScope __scope = {
@@ -364,55 +367,55 @@ BBINT _m_tank_attack_DrawSplash(){
 			}
 		};
 		bbOnDebugEnterScope(&__scope);
-		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 336, 0};
+		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 356, 0};
 		bbOnDebugEnterStm(&__stmt_0);
 		brl_max2d_Cls();
-		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 337, 0};
+		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 357, 0};
 		bbOnDebugEnterStm(&__stmt_1);
 		brl_max2d_SetColor(255,255,255);
-		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 338, 0};
+		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 358, 0};
 		bbOnDebugEnterStm(&__stmt_2);
 		_m_tank_attack_PrintMessage(&_s17,400,32,1);
-		struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 339, 0};
+		struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 359, 0};
 		bbOnDebugEnterStm(&__stmt_3);
 		brl_max2d_SetColor(255,192,0);
-		struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 340, 0};
+		struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 360, 0};
 		bbOnDebugEnterStm(&__stmt_4);
 		_m_tank_attack_PrintMessage(&_s18,400,96,1);
-		struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 341, 0};
+		struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 361, 0};
 		bbOnDebugEnterStm(&__stmt_5);
 		brl_max2d_SetColor(255,255,255);
-		struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 342, 0};
+		struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 362, 0};
 		bbOnDebugEnterStm(&__stmt_6);
 		_m_tank_attack_PrintMessage(&_s19,400,228,1);
-		struct BBDebugStm __stmt_7 = {0xc6ae64f32ad8815b, 343, 0};
+		struct BBDebugStm __stmt_7 = {0xc6ae64f32ad8815b, 363, 0};
 		bbOnDebugEnterStm(&__stmt_7);
 		_m_tank_attack_PrintMessage(&_s20,400,260,1);
-		struct BBDebugStm __stmt_8 = {0xc6ae64f32ad8815b, 344, 0};
+		struct BBDebugStm __stmt_8 = {0xc6ae64f32ad8815b, 364, 0};
 		bbOnDebugEnterStm(&__stmt_8);
 		brl_max2d_SetColor(0,255,192);
-		struct BBDebugStm __stmt_9 = {0xc6ae64f32ad8815b, 345, 0};
+		struct BBDebugStm __stmt_9 = {0xc6ae64f32ad8815b, 365, 0};
 		bbOnDebugEnterStm(&__stmt_9);
 		_m_tank_attack_PrintMessage(&_s21,400,292,1);
-		struct BBDebugStm __stmt_10 = {0xc6ae64f32ad8815b, 346, 0};
+		struct BBDebugStm __stmt_10 = {0xc6ae64f32ad8815b, 366, 0};
 		bbOnDebugEnterStm(&__stmt_10);
 		_m_tank_attack_PrintMessage(&_s22,400,324,1);
-		struct BBDebugStm __stmt_11 = {0xc6ae64f32ad8815b, 348, 0};
+		struct BBDebugStm __stmt_11 = {0xc6ae64f32ad8815b, 368, 0};
 		bbOnDebugEnterStm(&__stmt_11);
 		brl_max2d_SetColor(255,0,0);
-		struct BBDebugStm __stmt_12 = {0xc6ae64f32ad8815b, 349, 0};
+		struct BBDebugStm __stmt_12 = {0xc6ae64f32ad8815b, 369, 0};
 		bbOnDebugEnterStm(&__stmt_12);
 		_m_tank_attack_PrintMessage(&_s23,400,492,1);
-		struct BBDebugStm __stmt_13 = {0xc6ae64f32ad8815b, 350, 0};
+		struct BBDebugStm __stmt_13 = {0xc6ae64f32ad8815b, 370, 0};
 		bbOnDebugEnterStm(&__stmt_13);
 		_m_tank_attack_PrintMessage(&_s24,400,524,1);
-		struct BBDebugStm __stmt_14 = {0xc6ae64f32ad8815b, 351, 0};
+		struct BBDebugStm __stmt_14 = {0xc6ae64f32ad8815b, 371, 0};
 		bbOnDebugEnterStm(&__stmt_14);
 		_m_tank_attack_PrintMessage(&_s25,400,556,1);
-		struct BBDebugStm __stmt_15 = {0xc6ae64f32ad8815b, 353, 0};
+		struct BBDebugStm __stmt_15 = {0xc6ae64f32ad8815b, 373, 0};
 		bbOnDebugEnterStm(&__stmt_15);
 		brl_graphics_Flip(-1);
-		struct BBDebugStm __stmt_16 = {0xc6ae64f32ad8815b, 354, 0};
+		struct BBDebugStm __stmt_16 = {0xc6ae64f32ad8815b, 374, 0};
 		bbOnDebugEnterStm(&__stmt_16);
 		if(brl_polledinput_KeyDown(65)!=0){
 			struct BBDebugScope __scope = {
@@ -423,7 +426,7 @@ BBINT _m_tank_attack_DrawSplash(){
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 355, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 375, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			bbt_retVal=1;
 			bbOnDebugLeaveScope();
@@ -436,7 +439,7 @@ BBINT _m_tank_attack_DrawSplash(){
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 356, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 376, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			if(brl_polledinput_KeyDown(66)!=0){
 				struct BBDebugScope __scope = {
@@ -447,7 +450,7 @@ BBINT _m_tank_attack_DrawSplash(){
 					}
 				};
 				bbOnDebugEnterScope(&__scope);
-				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 357, 0};
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 377, 0};
 				bbOnDebugEnterStm(&__stmt_0);
 				bbt_retVal=2;
 				bbOnDebugLeaveScope();
@@ -460,7 +463,7 @@ BBINT _m_tank_attack_DrawSplash(){
 					}
 				};
 				bbOnDebugEnterScope(&__scope);
-				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 358, 0};
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 378, 0};
 				bbOnDebugEnterStm(&__stmt_0);
 				if(brl_polledinput_KeyDown(67)!=0){
 					struct BBDebugScope __scope = {
@@ -471,7 +474,7 @@ BBINT _m_tank_attack_DrawSplash(){
 						}
 					};
 					bbOnDebugEnterScope(&__scope);
-					struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 359, 0};
+					struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 379, 0};
 					bbOnDebugEnterStm(&__stmt_0);
 					bbt_retVal=3;
 					bbOnDebugLeaveScope();
@@ -484,7 +487,7 @@ BBINT _m_tank_attack_DrawSplash(){
 						}
 					};
 					bbOnDebugEnterScope(&__scope);
-					struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 360, 0};
+					struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 380, 0};
 					bbOnDebugEnterStm(&__stmt_0);
 					if(brl_polledinput_KeyDown(90)!=0){
 						struct BBDebugScope __scope = {
@@ -495,7 +498,7 @@ BBINT _m_tank_attack_DrawSplash(){
 							}
 						};
 						bbOnDebugEnterScope(&__scope);
-						struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 361, 0};
+						struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 381, 0};
 						bbOnDebugEnterStm(&__stmt_0);
 						bbt_retVal=98;
 						bbOnDebugLeaveScope();
@@ -508,7 +511,7 @@ BBINT _m_tank_attack_DrawSplash(){
 							}
 						};
 						bbOnDebugEnterScope(&__scope);
-						struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 362, 0};
+						struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 382, 0};
 						bbOnDebugEnterStm(&__stmt_0);
 						if(brl_polledinput_KeyDown(27)!=0){
 							struct BBDebugScope __scope = {
@@ -519,7 +522,7 @@ BBINT _m_tank_attack_DrawSplash(){
 								}
 							};
 							bbOnDebugEnterScope(&__scope);
-							struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 363, 0};
+							struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 383, 0};
 							bbOnDebugEnterStm(&__stmt_0);
 							bbt_retVal=99;
 							bbOnDebugLeaveScope();
@@ -534,10 +537,10 @@ BBINT _m_tank_attack_DrawSplash(){
 		}
 		bbOnDebugLeaveScope();
 	}
-	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 366, 0};
+	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 386, 0};
 	bbOnDebugEnterStm(&__stmt_2);
 	brl_polledinput_FlushKeys(1);
-	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 367, 0};
+	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 387, 0};
 	bbOnDebugEnterStm(&__stmt_3);
 	bbOnDebugLeaveScope();
 	return bbt_retVal;
@@ -633,19 +636,19 @@ struct brl_linkedlist_TList_obj* _m_tank_attack_GetMapData(BBSTRING bbt_filename
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 95, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 99, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	bbt_list=(struct brl_linkedlist_TList_obj*)brl_linkedlist_CreateList();
-	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 96, 0};
+	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 100, 0};
 	bbOnDebugEnterStm(&__stmt_1);
 	bbt_y=0;
-	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 97, 0};
+	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 101, 0};
 	bbOnDebugEnterStm(&__stmt_2);
 	bbt_x=0;
-	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 98, 0};
+	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 102, 0};
 	bbOnDebugEnterStm(&__stmt_3);
 	bbt_file=(struct brl_stream_TStream_obj*)brl_filesystem_OpenFile((BBOBJECT)bbt_filename,1,0);
-	struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 100, 0};
+	struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 104, 0};
 	bbOnDebugEnterStm(&__stmt_4);
 	while(!(brl_stream_Eof((struct brl_stream_TStream_obj*)bbt_file)!=0)){
 		BBSTRING bbt_line=(&bbEmptyString);
@@ -670,13 +673,13 @@ struct brl_linkedlist_TList_obj* _m_tank_attack_GetMapData(BBSTRING bbt_filename
 			}
 		};
 		bbOnDebugEnterScope(&__scope);
-		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 105, 0};
+		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 109, 0};
 		bbOnDebugEnterStm(&__stmt_0);
 		bbt_line=brl_stream_ReadLine((struct brl_stream_TStream_obj*)bbt_file);
-		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 106, 0};
+		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 110, 0};
 		bbOnDebugEnterStm(&__stmt_1);
 		bbt_cells=bbStringSplit((BBSTRING)bbt_line,&_s37);
-		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 113, 0};
+		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 117, 0};
 		bbOnDebugEnterStm(&__stmt_2);
 		{
 			BBINT bbt_x2=0;
@@ -703,10 +706,10 @@ struct brl_linkedlist_TList_obj* _m_tank_attack_GetMapData(BBSTRING bbt_filename
 					}
 				};
 				bbOnDebugEnterScope(&__scope);
-				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 114, 0};
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 118, 0};
 				bbOnDebugEnterStm(&__stmt_0);
 				bbt_c=((BBSTRING*)BBARRAYDATAINDEX((bbt_cells),(bbt_cells)->dims,((BBUINT)bbt_x2)))[((BBUINT)bbt_x2)];
-				struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 115, 0};
+				struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 119, 0};
 				bbOnDebugEnterStm(&__stmt_1);
 				if(bbStringEquals(bbt_c, &_s16)==1){
 					struct _m_tank_attack_TVector2_obj* bbt_vec=(struct _m_tank_attack_TVector2_obj*)(&bbNullObject);
@@ -724,16 +727,16 @@ struct brl_linkedlist_TList_obj* _m_tank_attack_GetMapData(BBSTRING bbt_filename
 						}
 					};
 					bbOnDebugEnterScope(&__scope);
-					struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 116, 0};
+					struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 120, 0};
 					bbOnDebugEnterStm(&__stmt_0);
 					bbt_vec=(struct _m_tank_attack_TVector2_obj*)(struct _m_tank_attack_TVector2_obj*)bbObjectAtomicNew((BBClass *)&_m_tank_attack_TVector2);
-					struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 117, 0};
+					struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 121, 0};
 					bbOnDebugEnterStm(&__stmt_1);
 					((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(bbt_vec))->__m_tank_attack_tvector2_x =((BBFLOAT)(bbt_x2*32));
-					struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 118, 0};
+					struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 122, 0};
 					bbOnDebugEnterStm(&__stmt_2);
 					((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(bbt_vec))->__m_tank_attack_tvector2_y =((BBFLOAT)(bbt_y*24));
-					struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 119, 0};
+					struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 123, 0};
 					bbOnDebugEnterStm(&__stmt_3);
 					brl_linkedlist_ListAddLast((struct brl_linkedlist_TList_obj*)bbt_list,(BBOBJECT)bbt_vec);
 					bbOnDebugLeaveScope();
@@ -741,15 +744,15 @@ struct brl_linkedlist_TList_obj* _m_tank_attack_GetMapData(BBSTRING bbt_filename
 				bbOnDebugLeaveScope();
 			}
 		}
-		struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 122, 0};
+		struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 126, 0};
 		bbOnDebugEnterStm(&__stmt_3);
 		bbt_y=(bbt_y+1);
 		bbOnDebugLeaveScope();
 	}
-	struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 124, 0};
+	struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 128, 0};
 	bbOnDebugEnterStm(&__stmt_5);
 	brl_filesystem_CloseFile((struct brl_stream_TStream_obj*)bbt_file);
-	struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 125, 0};
+	struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 129, 0};
 	bbOnDebugEnterStm(&__stmt_6);
 	bbOnDebugLeaveScope();
 	return (struct brl_linkedlist_TList_obj*)bbt_list;
@@ -783,13 +786,13 @@ struct brl_linkedlist_TList_obj* _m_tank_attack_LoadMap(BBINT bbt_mapID){
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 89, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 93, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	bbt_mapChar=bbStringFromChar(65+(bbt_mapID-1));
-	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 90, 0};
+	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 94, 0};
 	bbOnDebugEnterStm(&__stmt_1);
 	bbt_mapFilename=bbStringConcat(bbStringConcat(&_s14,bbt_mapChar),&_s15);
-	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 91, 0};
+	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 95, 0};
 	bbOnDebugEnterStm(&__stmt_2);
 	bbOnDebugLeaveScope();
 	return (struct brl_linkedlist_TList_obj*)_m_tank_attack_GetMapData(bbt_mapFilename);
@@ -806,13 +809,14 @@ void __m_tank_attack_TTank_New(struct _m_tank_attack_TTank_obj* o) {
 	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(o))->__m_tank_attack_ttank_rotrightkey = 0;
 	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(o))->__m_tank_attack_ttank_rotleftkey = 0;
 	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(o))->__m_tank_attack_ttank_forwardkey = 0;
+	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(o))->__m_tank_attack_ttank_reversekey = 0;
 	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(o))->__m_tank_attack_ttank_firekey = 0;
 	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(o))->__m_tank_attack_ttank_bullet = (struct _m_tank_attack_TBullet_obj*)(&bbNullObject);
 	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(o))->__m_tank_attack_ttank_score = 0;
 }
-struct _m_tank_attack_TTank_obj* _m_tank_attack_TTank_Create_TTTank_iiiiiiiii(BBINT bbt_x,BBINT bbt_y,BBINT bbt_r,BBINT bbt_g,BBINT bbt_b,BBINT bbt_rotLeft,BBINT bbt_rotRight,BBINT bbt_forward,BBINT bbt_fire){
+struct _m_tank_attack_TTank_obj* _m_tank_attack_TTank_Create_TTTank_iiiiiiiiii(BBINT bbt_x,BBINT bbt_y,BBINT bbt_r,BBINT bbt_g,BBINT bbt_b,BBINT bbt_rotLeft,BBINT bbt_rotRight,BBINT bbt_forward,BBINT bbt_fire,BBINT bbt_reverse){
 	struct _m_tank_attack_TTank_obj* bbt_tank=(struct _m_tank_attack_TTank_obj*)(&bbNullObject);
-	struct BBDebugScope_10 __scope = {
+	struct BBDebugScope_11 __scope = {
 		BBDEBUGSCOPE_FUNCTION,
 		"Create",
 		{
@@ -872,6 +876,12 @@ struct _m_tank_attack_TTank_obj* _m_tank_attack_TTank_Create_TTTank_iiiiiiiii(BB
 			},
 			{
 				BBDEBUGDECL_LOCAL,
+				"reverse",
+				"i",
+				.var_address=&bbt_reverse
+			},
+			{
+				BBDEBUGDECL_LOCAL,
 				"tank",
 				":TTank",
 				.var_address=&bbt_tank
@@ -880,66 +890,69 @@ struct _m_tank_attack_TTank_obj* _m_tank_attack_TTank_Create_TTTank_iiiiiiiii(BB
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 54, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 57, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	bbt_tank=(struct _m_tank_attack_TTank_obj*)(struct _m_tank_attack_TTank_obj*)bbObjectNew((BBClass *)&_m_tank_attack_TTank);
-	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 55, 0};
+	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 58, 0};
 	bbOnDebugEnterStm(&__stmt_1);
 	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_x =((BBFLOAT)bbt_x);
-	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 56, 0};
+	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 59, 0};
 	bbOnDebugEnterStm(&__stmt_2);
 	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_y =((BBFLOAT)bbt_y);
-	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 58, 0};
+	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 61, 0};
 	bbOnDebugEnterStm(&__stmt_3);
 	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_r =bbt_r;
-	struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 59, 0};
+	struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 62, 0};
 	bbOnDebugEnterStm(&__stmt_4);
 	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_g =bbt_g;
-	struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 60, 0};
+	struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 63, 0};
 	bbOnDebugEnterStm(&__stmt_5);
 	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_b =bbt_b;
-	struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 62, 0};
+	struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 65, 0};
 	bbOnDebugEnterStm(&__stmt_6);
 	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_rotrightkey =bbt_rotRight;
-	struct BBDebugStm __stmt_7 = {0xc6ae64f32ad8815b, 63, 0};
+	struct BBDebugStm __stmt_7 = {0xc6ae64f32ad8815b, 66, 0};
 	bbOnDebugEnterStm(&__stmt_7);
 	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_rotleftkey =bbt_rotLeft;
-	struct BBDebugStm __stmt_8 = {0xc6ae64f32ad8815b, 64, 0};
+	struct BBDebugStm __stmt_8 = {0xc6ae64f32ad8815b, 67, 0};
 	bbOnDebugEnterStm(&__stmt_8);
 	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_forwardkey =bbt_forward;
-	struct BBDebugStm __stmt_9 = {0xc6ae64f32ad8815b, 65, 0};
+	struct BBDebugStm __stmt_9 = {0xc6ae64f32ad8815b, 68, 0};
 	bbOnDebugEnterStm(&__stmt_9);
-	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_firekey =bbt_fire;
-	struct BBDebugStm __stmt_10 = {0xc6ae64f32ad8815b, 67, 0};
+	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_reversekey =bbt_reverse;
+	struct BBDebugStm __stmt_10 = {0xc6ae64f32ad8815b, 69, 0};
 	bbOnDebugEnterStm(&__stmt_10);
-	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_bullet =(struct _m_tank_attack_TBullet_obj*)(struct _m_tank_attack_TBullet_obj*)bbObjectNew((BBClass *)&_m_tank_attack_TBullet);
-	struct BBDebugStm __stmt_11 = {0xc6ae64f32ad8815b, 68, 0};
+	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_firekey =bbt_fire;
+	struct BBDebugStm __stmt_11 = {0xc6ae64f32ad8815b, 71, 0};
 	bbOnDebugEnterStm(&__stmt_11);
-	((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_isalive =0;
-	struct BBDebugStm __stmt_12 = {0xc6ae64f32ad8815b, 69, 0};
+	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_bullet =(struct _m_tank_attack_TBullet_obj*)(struct _m_tank_attack_TBullet_obj*)bbObjectNew((BBClass *)&_m_tank_attack_TBullet);
+	struct BBDebugStm __stmt_12 = {0xc6ae64f32ad8815b, 72, 0};
 	bbOnDebugEnterStm(&__stmt_12);
-	((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_location =(struct _m_tank_attack_TVector2_obj*)(struct _m_tank_attack_TVector2_obj*)bbObjectAtomicNew((BBClass *)&_m_tank_attack_TVector2);
-	struct BBDebugStm __stmt_13 = {0xc6ae64f32ad8815b, 70, 0};
+	((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_isalive =0;
+	struct BBDebugStm __stmt_13 = {0xc6ae64f32ad8815b, 73, 0};
 	bbOnDebugEnterStm(&__stmt_13);
-	((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_speed =(struct _m_tank_attack_TVector2_obj*)(struct _m_tank_attack_TVector2_obj*)bbObjectAtomicNew((BBClass *)&_m_tank_attack_TVector2);
-	struct BBDebugStm __stmt_14 = {0xc6ae64f32ad8815b, 71, 0};
+	((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_location =(struct _m_tank_attack_TVector2_obj*)(struct _m_tank_attack_TVector2_obj*)bbObjectAtomicNew((BBClass *)&_m_tank_attack_TVector2);
+	struct BBDebugStm __stmt_14 = {0xc6ae64f32ad8815b, 74, 0};
 	bbOnDebugEnterStm(&__stmt_14);
-	((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_location ))->__m_tank_attack_tvector2_x =0.000000000f;
-	struct BBDebugStm __stmt_15 = {0xc6ae64f32ad8815b, 72, 0};
+	((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_speed =(struct _m_tank_attack_TVector2_obj*)(struct _m_tank_attack_TVector2_obj*)bbObjectAtomicNew((BBClass *)&_m_tank_attack_TVector2);
+	struct BBDebugStm __stmt_15 = {0xc6ae64f32ad8815b, 75, 0};
 	bbOnDebugEnterStm(&__stmt_15);
-	((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_location ))->__m_tank_attack_tvector2_y =0.000000000f;
-	struct BBDebugStm __stmt_16 = {0xc6ae64f32ad8815b, 73, 0};
+	((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_location ))->__m_tank_attack_tvector2_x =0.000000000f;
+	struct BBDebugStm __stmt_16 = {0xc6ae64f32ad8815b, 76, 0};
 	bbOnDebugEnterStm(&__stmt_16);
-	((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_speed ))->__m_tank_attack_tvector2_x =0.000000000f;
-	struct BBDebugStm __stmt_17 = {0xc6ae64f32ad8815b, 74, 0};
+	((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_location ))->__m_tank_attack_tvector2_y =0.000000000f;
+	struct BBDebugStm __stmt_17 = {0xc6ae64f32ad8815b, 77, 0};
 	bbOnDebugEnterStm(&__stmt_17);
-	((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_speed ))->__m_tank_attack_tvector2_y =0.000000000f;
-	struct BBDebugStm __stmt_18 = {0xc6ae64f32ad8815b, 76, 0};
+	((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_speed ))->__m_tank_attack_tvector2_x =0.000000000f;
+	struct BBDebugStm __stmt_18 = {0xc6ae64f32ad8815b, 78, 0};
 	bbOnDebugEnterStm(&__stmt_18);
+	((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_tank))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_speed ))->__m_tank_attack_tvector2_y =0.000000000f;
+	struct BBDebugStm __stmt_19 = {0xc6ae64f32ad8815b, 80, 0};
+	bbOnDebugEnterStm(&__stmt_19);
 	bbOnDebugLeaveScope();
 	return (struct _m_tank_attack_TTank_obj*)bbt_tank;
 }
-struct BBDebugScope_14 _m_tank_attack_TTank_scope ={
+struct BBDebugScope_15 _m_tank_attack_TTank_scope ={
 	BBDEBUGSCOPE_USERTYPE,
 	"TTank",
 	{
@@ -999,6 +1012,12 @@ struct BBDebugScope_14 _m_tank_attack_TTank_scope ={
 		},
 		{
 			BBDEBUGDECL_FIELD,
+			"reverseKey",
+			"i",
+			.field_offset=offsetof(struct _m_tank_attack_TTank_obj,__m_tank_attack_ttank_reversekey)
+		},
+		{
+			BBDEBUGDECL_FIELD,
 			"fireKey",
 			"i",
 			.field_offset=offsetof(struct _m_tank_attack_TTank_obj,__m_tank_attack_ttank_firekey)
@@ -1024,8 +1043,8 @@ struct BBDebugScope_14 _m_tank_attack_TTank_scope ={
 		{
 			BBDEBUGDECL_TYPEFUNCTION,
 			"Create",
-			"(i,i,i,i,i,i,i,i,i):TTank",
-			.var_address=(void*)&_m_tank_attack_TTank_Create_TTTank_iiiiiiiii
+			"(i,i,i,i,i,i,i,i,i,i):TTank",
+			.var_address=(void*)&_m_tank_attack_TTank_Create_TTTank_iiiiiiiiii
 		},
 		BBDEBUGDECL_END
 	}
@@ -1045,7 +1064,7 @@ struct BBClass__m_tank_attack_TTank _m_tank_attack_TTank={
 	offsetof(struct _m_tank_attack_TTank_obj,__m_tank_attack_ttank_score) - offsetof(struct _m_tank_attack_TTank_obj,__m_tank_attack_ttank_x) + sizeof(BBINT)
 	,0
 	,offsetof(struct _m_tank_attack_TTank_obj,__m_tank_attack_ttank_x)
-	,_m_tank_attack_TTank_Create_TTTank_iiiiiiiii
+	,_m_tank_attack_TTank_Create_TTTank_iiiiiiiiii
 };
 
 void __m_tank_attack_TBullet_New(struct _m_tank_attack_TBullet_obj* o) {
@@ -1095,19 +1114,19 @@ BBINT __m_tank_attack_TBullet_Init_ffff(struct _m_tank_attack_TBullet_obj* o,BBF
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 26, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 28, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(o))->__m_tank_attack_tbullet_location ))->__m_tank_attack_tvector2_x =bbt_x;
-	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 27, 0};
+	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 29, 0};
 	bbOnDebugEnterStm(&__stmt_1);
 	((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(o))->__m_tank_attack_tbullet_location ))->__m_tank_attack_tvector2_y =bbt_y;
-	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 28, 0};
+	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 30, 0};
 	bbOnDebugEnterStm(&__stmt_2);
 	((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(o))->__m_tank_attack_tbullet_speed ))->__m_tank_attack_tvector2_x =bbt_sx;
-	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 29, 0};
+	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 31, 0};
 	bbOnDebugEnterStm(&__stmt_3);
 	((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(o))->__m_tank_attack_tbullet_speed ))->__m_tank_attack_tvector2_y =bbt_sy;
-	struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 30, 0};
+	struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 32, 0};
 	bbOnDebugEnterStm(&__stmt_4);
 	((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(o))->__m_tank_attack_tbullet_isalive =1;
 	bbOnDebugLeaveScope();
@@ -1196,10 +1215,10 @@ BBINT _m_tank_attack_UpdateCountDown(BBINT* bbt_roundTime,BBINT bbt_countDown){
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 151, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 155, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	bbt_ms=bbMilliSecs();
-	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 152, 0};
+	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 156, 0};
 	bbOnDebugEnterStm(&__stmt_1);
 	if(bbt_ms>(*bbt_roundTime+1000)){
 		struct BBDebugScope __scope = {
@@ -1210,15 +1229,15 @@ BBINT _m_tank_attack_UpdateCountDown(BBINT* bbt_roundTime,BBINT bbt_countDown){
 			}
 		};
 		bbOnDebugEnterScope(&__scope);
-		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 153, 0};
+		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 157, 0};
 		bbOnDebugEnterStm(&__stmt_0);
 		*bbt_roundTime=bbMilliSecs();
-		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 154, 0};
+		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 158, 0};
 		bbOnDebugEnterStm(&__stmt_1);
 		bbt_countDown-=1;
 		bbOnDebugLeaveScope();
 	}
-	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 156, 0};
+	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 160, 0};
 	bbOnDebugEnterStm(&__stmt_2);
 	bbOnDebugLeaveScope();
 	return bbt_countDown;
@@ -1256,7 +1275,7 @@ BBINT _m_tank_attack_IsCrashWithBricks(struct brl_linkedlist_TList_obj* bbt_mapD
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 173, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 177, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	struct brl_linkedlist_TListEnum_obj* bbt_=(struct brl_linkedlist_TListEnum_obj*)((struct brl_linkedlist_TList_obj*)bbNullObjectTest(bbt_mapData))->clas->m_ObjectEnumerator((struct brl_linkedlist_TList_obj*)bbt_mapData);
 	while(((struct brl_linkedlist_TListEnum_obj*)bbNullObjectTest(bbt_))->clas->m_HasNext((struct brl_linkedlist_TListEnum_obj*)bbt_)!=0){
@@ -1280,7 +1299,7 @@ BBINT _m_tank_attack_IsCrashWithBricks(struct brl_linkedlist_TList_obj* bbt_mapD
 			bbOnDebugLeaveScope();
 			continue;
 		}
-		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 174, 0};
+		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 178, 0};
 		bbOnDebugEnterStm(&__stmt_0);
 		if(brl_max2d_ImagesCollide((struct brl_max2d_image_TImage_obj*)_m_tank_attack_brick,((BBINT)((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(bbt_vec))->__m_tank_attack_tvector2_x ),((BBINT)((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(bbt_vec))->__m_tank_attack_tvector2_y ),0,(struct brl_max2d_image_TImage_obj*)bbt_img,((BBINT)bbt_x),((BBINT)bbt_y),0)!=0){
 			struct BBDebugScope __scope = {
@@ -1291,7 +1310,7 @@ BBINT _m_tank_attack_IsCrashWithBricks(struct brl_linkedlist_TList_obj* bbt_mapD
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 175, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 179, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			bbOnDebugLeaveScope();
 			bbOnDebugLeaveScope();
@@ -1300,7 +1319,7 @@ BBINT _m_tank_attack_IsCrashWithBricks(struct brl_linkedlist_TList_obj* bbt_mapD
 		}
 		bbOnDebugLeaveScope();
 	}
-	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 178, 0};
+	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 182, 0};
 	bbOnDebugEnterStm(&__stmt_1);
 	bbOnDebugLeaveScope();
 	return 0;
@@ -1326,7 +1345,7 @@ BBINT _m_tank_attack_UpdateTanks(struct brl_linkedlist_TList_obj* bbt_mapData,st
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 223, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 227, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	struct brl_linkedlist_TListEnum_obj* bbt_=(struct brl_linkedlist_TListEnum_obj*)((struct brl_linkedlist_TList_obj*)bbNullObjectTest(bbt_tankList))->clas->m_ObjectEnumerator((struct brl_linkedlist_TList_obj*)bbt_tankList);
 	while(((struct brl_linkedlist_TListEnum_obj*)bbNullObjectTest(bbt_))->clas->m_HasNext((struct brl_linkedlist_TListEnum_obj*)bbt_)!=0){
@@ -1350,7 +1369,7 @@ BBINT _m_tank_attack_UpdateTanks(struct brl_linkedlist_TList_obj* bbt_mapData,st
 			bbOnDebugLeaveScope();
 			continue;
 		}
-		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 224, 0};
+		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 228, 0};
 		bbOnDebugEnterStm(&__stmt_0);
 		if(brl_polledinput_KeyDown(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotleftkey )!=0){
 			struct BBDebugScope __scope = {
@@ -1361,10 +1380,10 @@ BBINT _m_tank_attack_UpdateTanks(struct brl_linkedlist_TList_obj* bbt_mapData,st
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 225, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 229, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation =(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation -2.0f);
-			struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 226, 0};
+			struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 230, 0};
 			bbOnDebugEnterStm(&__stmt_1);
 			if(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation <0.000000000f){
 				struct BBDebugScope __scope = {
@@ -1375,7 +1394,7 @@ BBINT _m_tank_attack_UpdateTanks(struct brl_linkedlist_TList_obj* bbt_mapData,st
 					}
 				};
 				bbOnDebugEnterScope(&__scope);
-				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 227, 0};
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 231, 0};
 				bbOnDebugEnterStm(&__stmt_0);
 				((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation =(360.000000f-((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation );
 				bbOnDebugLeaveScope();
@@ -1390,7 +1409,7 @@ BBINT _m_tank_attack_UpdateTanks(struct brl_linkedlist_TList_obj* bbt_mapData,st
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 229, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 233, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			if(brl_polledinput_KeyDown(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotrightkey )!=0){
 				struct BBDebugScope __scope = {
@@ -1401,10 +1420,10 @@ BBINT _m_tank_attack_UpdateTanks(struct brl_linkedlist_TList_obj* bbt_mapData,st
 					}
 				};
 				bbOnDebugEnterScope(&__scope);
-				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 230, 0};
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 234, 0};
 				bbOnDebugEnterStm(&__stmt_0);
 				((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation =(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation +2.0f);
-				struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 231, 0};
+				struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 235, 0};
 				bbOnDebugEnterStm(&__stmt_1);
 				if(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation >360.000000f){
 					struct BBDebugScope __scope = {
@@ -1415,7 +1434,7 @@ BBINT _m_tank_attack_UpdateTanks(struct brl_linkedlist_TList_obj* bbt_mapData,st
 						}
 					};
 					bbOnDebugEnterScope(&__scope);
-					struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 232, 0};
+					struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 236, 0};
 					bbOnDebugEnterStm(&__stmt_0);
 					((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation =(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation -360.000000f);
 					bbOnDebugLeaveScope();
@@ -1424,7 +1443,7 @@ BBINT _m_tank_attack_UpdateTanks(struct brl_linkedlist_TList_obj* bbt_mapData,st
 			}
 			bbOnDebugLeaveScope();
 		}
-		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 236, 0};
+		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 240, 0};
 		bbOnDebugEnterStm(&__stmt_1);
 		if((brl_polledinput_KeyDown(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_firekey )!=0) && !(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_isalive !=0)){
 			BBFLOAT bbt_x=0;
@@ -1463,31 +1482,31 @@ BBINT _m_tank_attack_UpdateTanks(struct brl_linkedlist_TList_obj* bbt_mapData,st
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 237, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 241, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			bbt_x=((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_x ;
-			struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 238, 0};
+			struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 242, 0};
 			bbOnDebugEnterStm(&__stmt_1);
 			bbt_y=((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_y ;
-			struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 240, 0};
+			struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 244, 0};
 			bbOnDebugEnterStm(&__stmt_2);
 			bbt_x=((BBFLOAT)(((BBDOUBLE)bbt_x)+(1.57000005*bbSin((double)((BBDOUBLE)((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation )))));
-			struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 241, 0};
+			struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 245, 0};
 			bbOnDebugEnterStm(&__stmt_3);
 			bbt_y=((BBFLOAT)(((BBDOUBLE)bbt_y)-(1.57000005*bbCos((double)((BBDOUBLE)((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation )))));
-			struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 243, 0};
+			struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 247, 0};
 			bbOnDebugEnterStm(&__stmt_4);
 			bbt_dx=(bbt_x-((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_x );
-			struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 244, 0};
+			struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 248, 0};
 			bbOnDebugEnterStm(&__stmt_5);
 			bbt_dy=(bbt_y-((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_y );
-			struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 245, 0};
+			struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 249, 0};
 			bbOnDebugEnterStm(&__stmt_6);
 			struct _m_tank_attack_TBullet_obj* bbt_2;
 			(((struct _m_tank_attack_TBullet_obj*)((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest((bbt_2 = ((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))))->clas)->m_Init_ffff((struct _m_tank_attack_TBullet_obj*)bbt_2,((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_x ,((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_y ,(bbt_dx*2.00000000f),(bbt_dy*2.00000000f));
 			bbOnDebugLeaveScope();
 		}
-		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 248, 0};
+		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 252, 0};
 		bbOnDebugEnterStm(&__stmt_2);
 		if(brl_polledinput_KeyDown(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_forwardkey )!=0){
 			BBFLOAT bbt_x2=0;
@@ -1512,19 +1531,19 @@ BBINT _m_tank_attack_UpdateTanks(struct brl_linkedlist_TList_obj* bbt_mapData,st
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 249, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 253, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			bbt_x2=((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_x ;
-			struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 250, 0};
+			struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 254, 0};
 			bbOnDebugEnterStm(&__stmt_1);
 			bbt_y2=((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_y ;
-			struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 251, 0};
+			struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 255, 0};
 			bbOnDebugEnterStm(&__stmt_2);
 			bbt_x2=((BBFLOAT)(((BBDOUBLE)bbt_x2)+(1.57000005*bbSin((double)((BBDOUBLE)((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation )))));
-			struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 252, 0};
+			struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 256, 0};
 			bbOnDebugEnterStm(&__stmt_3);
 			bbt_y2=((BBFLOAT)(((BBDOUBLE)bbt_y2)-(1.57000005*bbCos((double)((BBDOUBLE)((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation )))));
-			struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 253, 0};
+			struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 257, 0};
 			bbOnDebugEnterStm(&__stmt_4);
 			if(_m_tank_attack_IsCrashWithBricks((struct brl_linkedlist_TList_obj*)bbt_mapData,(struct brl_max2d_image_TImage_obj*)_m_tank_attack_tankImage,bbt_x2,bbt_y2)!=0){
 				struct BBDebugScope __scope = {
@@ -1535,14 +1554,14 @@ BBINT _m_tank_attack_UpdateTanks(struct brl_linkedlist_TList_obj* bbt_mapData,st
 					}
 				};
 				bbOnDebugEnterScope(&__scope);
-				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 254, 0};
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 258, 0};
 				bbOnDebugEnterStm(&__stmt_0);
 				bbOnDebugLeaveScope();
 				bbOnDebugLeaveScope();
 				bbOnDebugLeaveScope();
 				continue;
 			}
-			struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 256, 0};
+			struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 260, 0};
 			bbOnDebugEnterStm(&__stmt_5);
 			if((bbt_x2>=32.0000000f) && (bbt_x2<=768.000000f)){
 				struct BBDebugScope __scope = {
@@ -1553,12 +1572,12 @@ BBINT _m_tank_attack_UpdateTanks(struct brl_linkedlist_TList_obj* bbt_mapData,st
 					}
 				};
 				bbOnDebugEnterScope(&__scope);
-				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 257, 0};
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 261, 0};
 				bbOnDebugEnterStm(&__stmt_0);
 				((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_x =bbt_x2;
 				bbOnDebugLeaveScope();
 			}
-			struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 259, 0};
+			struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 263, 0};
 			bbOnDebugEnterStm(&__stmt_6);
 			if((bbt_y2>=32.0000000f) && (bbt_y2<=568.000000f)){
 				struct BBDebugScope __scope = {
@@ -1569,16 +1588,105 @@ BBINT _m_tank_attack_UpdateTanks(struct brl_linkedlist_TList_obj* bbt_mapData,st
 					}
 				};
 				bbOnDebugEnterScope(&__scope);
-				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 260, 0};
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 264, 0};
 				bbOnDebugEnterStm(&__stmt_0);
 				((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_y =bbt_y2;
 				bbOnDebugLeaveScope();
 			}
 			bbOnDebugLeaveScope();
 		}
+		struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 268, 0};
+		bbOnDebugEnterStm(&__stmt_3);
+		if(brl_polledinput_KeyDown(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_reversekey )!=0){
+			BBFLOAT bbt_x3=0;
+			BBFLOAT bbt_y3=0;
+			struct BBDebugScope_2 __scope = {
+				BBDEBUGSCOPE_LOCALBLOCK,
+				0,
+				{
+					{
+						BBDEBUGDECL_LOCAL,
+						"x",
+						"f",
+						.var_address=&bbt_x3
+					},
+					{
+						BBDEBUGDECL_LOCAL,
+						"y",
+						"f",
+						.var_address=&bbt_y3
+					},
+					BBDEBUGDECL_END 
+				}
+			};
+			bbOnDebugEnterScope(&__scope);
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 269, 0};
+			bbOnDebugEnterStm(&__stmt_0);
+			bbt_x3=((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_x ;
+			struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 270, 0};
+			bbOnDebugEnterStm(&__stmt_1);
+			bbt_y3=((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_y ;
+			struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 271, 0};
+			bbOnDebugEnterStm(&__stmt_2);
+			bbt_x3=((BBFLOAT)(((BBDOUBLE)bbt_x3)-(1.57000005*bbSin((double)((BBDOUBLE)((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation )))));
+			struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 272, 0};
+			bbOnDebugEnterStm(&__stmt_3);
+			bbt_y3=((BBFLOAT)(((BBDOUBLE)bbt_y3)+(1.57000005*bbCos((double)((BBDOUBLE)((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation )))));
+			struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 273, 0};
+			bbOnDebugEnterStm(&__stmt_4);
+			if(_m_tank_attack_IsCrashWithBricks((struct brl_linkedlist_TList_obj*)bbt_mapData,(struct brl_max2d_image_TImage_obj*)_m_tank_attack_tankImage,bbt_x3,bbt_y3)!=0){
+				struct BBDebugScope __scope = {
+					BBDEBUGSCOPE_LOCALBLOCK,
+					0,
+					{
+						BBDEBUGDECL_END 
+					}
+				};
+				bbOnDebugEnterScope(&__scope);
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 274, 0};
+				bbOnDebugEnterStm(&__stmt_0);
+				bbOnDebugLeaveScope();
+				bbOnDebugLeaveScope();
+				bbOnDebugLeaveScope();
+				continue;
+			}
+			struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 276, 0};
+			bbOnDebugEnterStm(&__stmt_5);
+			if((bbt_x3>=32.0000000f) && (bbt_x3<=768.000000f)){
+				struct BBDebugScope __scope = {
+					BBDEBUGSCOPE_LOCALBLOCK,
+					0,
+					{
+						BBDEBUGDECL_END 
+					}
+				};
+				bbOnDebugEnterScope(&__scope);
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 277, 0};
+				bbOnDebugEnterStm(&__stmt_0);
+				((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_x =bbt_x3;
+				bbOnDebugLeaveScope();
+			}
+			struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 279, 0};
+			bbOnDebugEnterStm(&__stmt_6);
+			if((bbt_y3>=32.0000000f) && (bbt_y3<=568.000000f)){
+				struct BBDebugScope __scope = {
+					BBDEBUGSCOPE_LOCALBLOCK,
+					0,
+					{
+						BBDEBUGDECL_END 
+					}
+				};
+				bbOnDebugEnterScope(&__scope);
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 280, 0};
+				bbOnDebugEnterStm(&__stmt_0);
+				((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_y =bbt_y3;
+				bbOnDebugLeaveScope();
+			}
+			bbOnDebugLeaveScope();
+		}
 		bbOnDebugLeaveScope();
 	}
-	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 265, 0};
+	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 285, 0};
 	bbOnDebugEnterStm(&__stmt_1);
 	brl_max2d_SetRotation(0.0f);
 	bbOnDebugLeaveScope();
@@ -1619,13 +1727,13 @@ BBINT _m_tank_attack_UpdateBullets(struct brl_linkedlist_TList_obj* bbt_mapData,
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 184, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 188, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	bbt_currentTank=0;
-	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 185, 0};
+	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 189, 0};
 	bbOnDebugEnterStm(&__stmt_1);
 	bbt_tankVictor=-1;
-	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 187, 0};
+	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 191, 0};
 	bbOnDebugEnterStm(&__stmt_2);
 	struct brl_linkedlist_TListEnum_obj* bbt_=(struct brl_linkedlist_TListEnum_obj*)((struct brl_linkedlist_TList_obj*)bbNullObjectTest(bbt_tankList))->clas->m_ObjectEnumerator((struct brl_linkedlist_TList_obj*)bbt_tankList);
 	while(((struct brl_linkedlist_TListEnum_obj*)bbNullObjectTest(bbt_))->clas->m_HasNext((struct brl_linkedlist_TListEnum_obj*)bbt_)!=0){
@@ -1656,10 +1764,10 @@ BBINT _m_tank_attack_UpdateBullets(struct brl_linkedlist_TList_obj* bbt_mapData,
 			bbOnDebugLeaveScope();
 			continue;
 		}
-		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 188, 0};
+		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 192, 0};
 		bbOnDebugEnterStm(&__stmt_0);
 		bbt_otherTank=(struct _m_tank_attack_TTank_obj*)&bbNullObject;
-		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 189, 0};
+		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 193, 0};
 		bbOnDebugEnterStm(&__stmt_1);
 		if(bbt_currentTank==0){
 			struct BBDebugScope __scope = {
@@ -1670,7 +1778,7 @@ BBINT _m_tank_attack_UpdateBullets(struct brl_linkedlist_TList_obj* bbt_mapData,
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 190, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 194, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			bbt_otherTank=(struct _m_tank_attack_TTank_obj*)((struct _m_tank_attack_TTank_obj*)bbObjectDowncast((BBOBJECT)((struct brl_linkedlist_TList_obj*)bbNullObjectTest(bbt_tankList))->clas->m_Last((struct brl_linkedlist_TList_obj*)bbt_tankList),(BBClass*)&_m_tank_attack_TTank));
 			bbOnDebugLeaveScope();
@@ -1683,12 +1791,12 @@ BBINT _m_tank_attack_UpdateBullets(struct brl_linkedlist_TList_obj* bbt_mapData,
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 192, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 196, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			bbt_otherTank=(struct _m_tank_attack_TTank_obj*)((struct _m_tank_attack_TTank_obj*)bbObjectDowncast((BBOBJECT)((struct brl_linkedlist_TList_obj*)bbNullObjectTest(bbt_tankList))->clas->m_First((struct brl_linkedlist_TList_obj*)bbt_tankList),(BBClass*)&_m_tank_attack_TTank));
 			bbOnDebugLeaveScope();
 		}
-		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 195, 0};
+		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 199, 0};
 		bbOnDebugEnterStm(&__stmt_2);
 		if(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_isalive !=0){
 			BBFLOAT bbt_nx=0;
@@ -1713,13 +1821,13 @@ BBINT _m_tank_attack_UpdateBullets(struct brl_linkedlist_TList_obj* bbt_mapData,
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 196, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 200, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			bbt_nx=(((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_location ))->__m_tank_attack_tvector2_x +((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_speed ))->__m_tank_attack_tvector2_x );
-			struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 197, 0};
+			struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 201, 0};
 			bbOnDebugEnterStm(&__stmt_1);
 			bbt_ny=(((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_location ))->__m_tank_attack_tvector2_y +((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_speed ))->__m_tank_attack_tvector2_y );
-			struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 199, 0};
+			struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 203, 0};
 			bbOnDebugEnterStm(&__stmt_2);
 			if(_m_tank_attack_IsCrashWithBricks((struct brl_linkedlist_TList_obj*)bbt_mapData,(struct brl_max2d_image_TImage_obj*)_m_tank_attack_bulletImage,bbt_nx,bbt_ny)!=0){
 				struct BBDebugScope __scope = {
@@ -1730,17 +1838,17 @@ BBINT _m_tank_attack_UpdateBullets(struct brl_linkedlist_TList_obj* bbt_mapData,
 					}
 				};
 				bbOnDebugEnterScope(&__scope);
-				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 200, 0};
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 204, 0};
 				bbOnDebugEnterStm(&__stmt_0);
 				((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_isalive =0;
-				struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 201, 0};
+				struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 205, 0};
 				bbOnDebugEnterStm(&__stmt_1);
 				bbOnDebugLeaveScope();
 				bbOnDebugLeaveScope();
 				bbOnDebugLeaveScope();
 				continue;
 			}
-			struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 204, 0};
+			struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 208, 0};
 			bbOnDebugEnterStm(&__stmt_3);
 			if(brl_max2d_ImagesCollide((struct brl_max2d_image_TImage_obj*)_m_tank_attack_bulletImage,((BBINT)bbt_nx),((BBINT)bbt_ny),0,(struct brl_max2d_image_TImage_obj*)_m_tank_attack_tankImage,((BBINT)((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_otherTank))->__m_tank_attack_ttank_x ),((BBINT)((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_otherTank))->__m_tank_attack_ttank_y ),0)!=0){
 				struct BBDebugScope __scope = {
@@ -1751,18 +1859,18 @@ BBINT _m_tank_attack_UpdateBullets(struct brl_linkedlist_TList_obj* bbt_mapData,
 					}
 				};
 				bbOnDebugEnterScope(&__scope);
-				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 205, 0};
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 209, 0};
 				bbOnDebugEnterStm(&__stmt_0);
 				bbt_tankVictor=bbt_currentTank;
 				bbOnDebugLeaveScope();
 			}
-			struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 207, 0};
+			struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 211, 0};
 			bbOnDebugEnterStm(&__stmt_4);
 			((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_location ))->__m_tank_attack_tvector2_x =bbt_nx;
-			struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 208, 0};
+			struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 212, 0};
 			bbOnDebugEnterStm(&__stmt_5);
 			((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_location ))->__m_tank_attack_tvector2_y =bbt_ny;
-			struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 210, 0};
+			struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 214, 0};
 			bbOnDebugEnterStm(&__stmt_6);
 			if((((((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_location ))->__m_tank_attack_tvector2_x <0.000000000f) || (((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_location ))->__m_tank_attack_tvector2_x >800.000000f)) || (((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_location ))->__m_tank_attack_tvector2_y <0.000000000f)) || (((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_location ))->__m_tank_attack_tvector2_y >600.000000f)){
 				struct BBDebugScope __scope = {
@@ -1773,19 +1881,19 @@ BBINT _m_tank_attack_UpdateBullets(struct brl_linkedlist_TList_obj* bbt_mapData,
 					}
 				};
 				bbOnDebugEnterScope(&__scope);
-				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 211, 0};
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 215, 0};
 				bbOnDebugEnterStm(&__stmt_0);
 				((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_isalive =0;
 				bbOnDebugLeaveScope();
 			}
 			bbOnDebugLeaveScope();
 		}
-		struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 215, 0};
+		struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 219, 0};
 		bbOnDebugEnterStm(&__stmt_3);
 		bbt_currentTank+=1;
 		bbOnDebugLeaveScope();
 	}
-	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 219, 0};
+	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 223, 0};
 	bbOnDebugEnterStm(&__stmt_3);
 	bbOnDebugLeaveScope();
 	return bbt_tankVictor;
@@ -1825,10 +1933,10 @@ BBINT _m_tank_attack_ResetGame(struct brl_linkedlist_TList_obj* bbt_tankList,BBI
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 277, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 297, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	bbt_winningTank=(struct _m_tank_attack_TTank_obj*)&bbNullObject;
-	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 278, 0};
+	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 298, 0};
 	bbOnDebugEnterStm(&__stmt_1);
 	if(bbt_tankVictor==0){
 		struct BBDebugScope __scope = {
@@ -1839,7 +1947,7 @@ BBINT _m_tank_attack_ResetGame(struct brl_linkedlist_TList_obj* bbt_tankList,BBI
 			}
 		};
 		bbOnDebugEnterScope(&__scope);
-		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 279, 0};
+		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 299, 0};
 		bbOnDebugEnterStm(&__stmt_0);
 		bbt_winningTank=(struct _m_tank_attack_TTank_obj*)((struct _m_tank_attack_TTank_obj*)bbObjectDowncast((BBOBJECT)((struct brl_linkedlist_TList_obj*)bbNullObjectTest(bbt_tankList))->clas->m_First((struct brl_linkedlist_TList_obj*)bbt_tankList),(BBClass*)&_m_tank_attack_TTank));
 		bbOnDebugLeaveScope();
@@ -1852,18 +1960,18 @@ BBINT _m_tank_attack_ResetGame(struct brl_linkedlist_TList_obj* bbt_tankList,BBI
 			}
 		};
 		bbOnDebugEnterScope(&__scope);
-		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 281, 0};
+		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 301, 0};
 		bbOnDebugEnterStm(&__stmt_0);
 		bbt_winningTank=(struct _m_tank_attack_TTank_obj*)((struct _m_tank_attack_TTank_obj*)bbObjectDowncast((BBOBJECT)((struct brl_linkedlist_TList_obj*)bbNullObjectTest(bbt_tankList))->clas->m_Last((struct brl_linkedlist_TList_obj*)bbt_tankList),(BBClass*)&_m_tank_attack_TTank));
 		bbOnDebugLeaveScope();
 	}
-	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 284, 0};
+	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 304, 0};
 	bbOnDebugEnterStm(&__stmt_2);
 	((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_winningTank))->__m_tank_attack_ttank_score +=1;
-	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 285, 0};
+	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 305, 0};
 	bbOnDebugEnterStm(&__stmt_3);
 	bbt_i=0;
-	struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 286, 0};
+	struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 306, 0};
 	bbOnDebugEnterStm(&__stmt_4);
 	struct brl_linkedlist_TListEnum_obj* bbt_=(struct brl_linkedlist_TListEnum_obj*)((struct brl_linkedlist_TList_obj*)bbNullObjectTest(bbt_tankList))->clas->m_ObjectEnumerator((struct brl_linkedlist_TList_obj*)bbt_tankList);
 	while(((struct brl_linkedlist_TListEnum_obj*)bbNullObjectTest(bbt_))->clas->m_HasNext((struct brl_linkedlist_TListEnum_obj*)bbt_)!=0){
@@ -1887,13 +1995,13 @@ BBINT _m_tank_attack_ResetGame(struct brl_linkedlist_TList_obj* bbt_tankList,BBI
 			bbOnDebugLeaveScope();
 			continue;
 		}
-		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 287, 0};
+		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 307, 0};
 		bbOnDebugEnterStm(&__stmt_0);
 		((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_isalive =0;
-		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 288, 0};
+		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 308, 0};
 		bbOnDebugEnterStm(&__stmt_1);
 		((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation =0.000000000f;
-		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 289, 0};
+		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 309, 0};
 		bbOnDebugEnterStm(&__stmt_2);
 		if(bbt_i==0){
 			struct BBDebugScope __scope = {
@@ -1904,10 +2012,10 @@ BBINT _m_tank_attack_ResetGame(struct brl_linkedlist_TList_obj* bbt_tankList,BBI
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 290, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 310, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_x =64.0000000f;
-			struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 291, 0};
+			struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 311, 0};
 			bbOnDebugEnterStm(&__stmt_1);
 			((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_y =300.000000f;
 			bbOnDebugLeaveScope();
@@ -1920,15 +2028,15 @@ BBINT _m_tank_attack_ResetGame(struct brl_linkedlist_TList_obj* bbt_tankList,BBI
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 293, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 313, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_x =704.000000f;
-			struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 294, 0};
+			struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 314, 0};
 			bbOnDebugEnterStm(&__stmt_1);
 			((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_y =300.000000f;
 			bbOnDebugLeaveScope();
 		}
-		struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 296, 0};
+		struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 316, 0};
 		bbOnDebugEnterStm(&__stmt_3);
 		bbt_i+=1;
 		bbOnDebugLeaveScope();
@@ -1951,10 +2059,10 @@ BBINT _m_tank_attack_DrawMap(struct brl_linkedlist_TList_obj* bbt_mapData){
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 270, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 290, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	brl_max2d_SetColor(255,255,255);
-	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 271, 0};
+	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 291, 0};
 	bbOnDebugEnterStm(&__stmt_1);
 	struct brl_linkedlist_TListEnum_obj* bbt_=(struct brl_linkedlist_TListEnum_obj*)((struct brl_linkedlist_TList_obj*)bbNullObjectTest(bbt_mapData))->clas->m_ObjectEnumerator((struct brl_linkedlist_TList_obj*)bbt_mapData);
 	while(((struct brl_linkedlist_TListEnum_obj*)bbNullObjectTest(bbt_))->clas->m_HasNext((struct brl_linkedlist_TListEnum_obj*)bbt_)!=0){
@@ -1978,7 +2086,7 @@ BBINT _m_tank_attack_DrawMap(struct brl_linkedlist_TList_obj* bbt_mapData){
 			bbOnDebugLeaveScope();
 			continue;
 		}
-		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 272, 0};
+		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 292, 0};
 		bbOnDebugEnterStm(&__stmt_0);
 		brl_max2d_DrawImage((struct brl_max2d_image_TImage_obj*)_m_tank_attack_brick,((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(bbt_vec))->__m_tank_attack_tvector2_x ,((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(bbt_vec))->__m_tank_attack_tvector2_y ,0);
 		bbOnDebugLeaveScope();
@@ -2001,7 +2109,7 @@ BBINT _m_tank_attack_DrawTanks(struct brl_linkedlist_TList_obj* bbt_tankList){
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 160, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 164, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	struct brl_linkedlist_TListEnum_obj* bbt_=(struct brl_linkedlist_TListEnum_obj*)((struct brl_linkedlist_TList_obj*)bbNullObjectTest(bbt_tankList))->clas->m_ObjectEnumerator((struct brl_linkedlist_TList_obj*)bbt_tankList);
 	while(((struct brl_linkedlist_TListEnum_obj*)bbNullObjectTest(bbt_))->clas->m_HasNext((struct brl_linkedlist_TListEnum_obj*)bbt_)!=0){
@@ -2025,19 +2133,19 @@ BBINT _m_tank_attack_DrawTanks(struct brl_linkedlist_TList_obj* bbt_tankList){
 			bbOnDebugLeaveScope();
 			continue;
 		}
-		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 161, 0};
+		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 165, 0};
 		bbOnDebugEnterStm(&__stmt_0);
 		brl_max2d_SetColor(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_r ,((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_g ,((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_b );
-		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 162, 0};
+		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 166, 0};
 		bbOnDebugEnterStm(&__stmt_1);
 		brl_max2d_SetRotation(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_rotation );
-		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 163, 0};
+		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 167, 0};
 		bbOnDebugEnterStm(&__stmt_2);
 		brl_max2d_DrawImage((struct brl_max2d_image_TImage_obj*)_m_tank_attack_tankImage,((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_x ,((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_y ,0);
-		struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 164, 0};
+		struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 168, 0};
 		bbOnDebugEnterStm(&__stmt_3);
 		brl_max2d_SetRotation(0.0f);
-		struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 165, 0};
+		struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 169, 0};
 		bbOnDebugEnterStm(&__stmt_4);
 		if(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_isalive !=0){
 			struct BBDebugScope __scope = {
@@ -2048,7 +2156,7 @@ BBINT _m_tank_attack_DrawTanks(struct brl_linkedlist_TList_obj* bbt_tankList){
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 166, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 170, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			brl_max2d_DrawImage((struct brl_max2d_image_TImage_obj*)_m_tank_attack_bulletImage,((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_location ))->__m_tank_attack_tvector2_x ,((struct _m_tank_attack_TVector2_obj*)bbNullObjectTest(((struct _m_tank_attack_TBullet_obj*)bbNullObjectTest(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_t))->__m_tank_attack_ttank_bullet ))->__m_tank_attack_tbullet_location ))->__m_tank_attack_tvector2_y ,0);
 			bbOnDebugLeaveScope();
@@ -2092,16 +2200,16 @@ BBINT _m_tank_attack_DrawNumber(BBINT bbt_x,BBINT bbt_number,BBINT bbt_offsetLef
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 82, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 86, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	bbt_s=bbStringConcat(&bbEmptyString,bbStringFromInt(bbt_number));
-	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 83, 0};
+	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 87, 0};
 	bbOnDebugEnterStm(&__stmt_1);
 	bbt_x=(bbt_x-(brl_max2d_TextWidth(bbt_s)/2));
-	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 84, 0};
+	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 88, 0};
 	bbOnDebugEnterStm(&__stmt_2);
 	bbt_x=(bbt_x-bbt_offsetLeft);
-	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 85, 0};
+	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 89, 0};
 	bbOnDebugEnterStm(&__stmt_3);
 	brl_max2d_DrawText(bbt_s,((BBFLOAT)bbt_x),48.0000000f);
 	bbOnDebugLeaveScope();
@@ -2142,28 +2250,28 @@ BBINT _m_tank_attack_DrawInformation(struct brl_linkedlist_TList_obj* bbt_tankLi
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 129, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 133, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	bbt_firstTank=(struct _m_tank_attack_TTank_obj*)((struct _m_tank_attack_TTank_obj*)bbObjectDowncast((BBOBJECT)((struct brl_linkedlist_TList_obj*)bbNullObjectTest(bbt_tankList))->clas->m_First((struct brl_linkedlist_TList_obj*)bbt_tankList),(BBClass*)&_m_tank_attack_TTank));
-	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 130, 0};
+	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 134, 0};
 	bbOnDebugEnterStm(&__stmt_1);
 	bbt_secondTank=(struct _m_tank_attack_TTank_obj*)((struct _m_tank_attack_TTank_obj*)bbObjectDowncast((BBOBJECT)((struct brl_linkedlist_TList_obj*)bbNullObjectTest(bbt_tankList))->clas->m_Last((struct brl_linkedlist_TList_obj*)bbt_tankList),(BBClass*)&_m_tank_attack_TTank));
-	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 132, 0};
+	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 136, 0};
 	bbOnDebugEnterStm(&__stmt_2);
 	brl_max2d_SetColor(255,0,0);
-	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 133, 0};
+	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 137, 0};
 	bbOnDebugEnterStm(&__stmt_3);
 	_m_tank_attack_DrawNumber(200,((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_firstTank))->__m_tank_attack_ttank_score ,1);
-	struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 135, 0};
+	struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 139, 0};
 	bbOnDebugEnterStm(&__stmt_4);
 	brl_max2d_SetColor(255,192,0);
-	struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 136, 0};
+	struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 140, 0};
 	bbOnDebugEnterStm(&__stmt_5);
 	_m_tank_attack_DrawNumber(366,bbt_countDown,0);
-	struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 138, 0};
+	struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 142, 0};
 	bbOnDebugEnterStm(&__stmt_6);
 	brl_max2d_SetColor(0,0,255);
-	struct BBDebugStm __stmt_7 = {0xc6ae64f32ad8815b, 139, 0};
+	struct BBDebugStm __stmt_7 = {0xc6ae64f32ad8815b, 143, 0};
 	bbOnDebugEnterStm(&__stmt_7);
 	_m_tank_attack_DrawNumber(600,((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_secondTank))->__m_tank_attack_ttank_score ,0);
 	bbOnDebugLeaveScope();
@@ -2197,13 +2305,13 @@ BBINT _m_tank_attack_DrawEndGame(struct _m_tank_attack_TTank_obj* bbt_p1,struct 
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 402, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 422, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	bbt_retVal=0;
-	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 403, 0};
+	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 423, 0};
 	bbOnDebugEnterStm(&__stmt_1);
 	brl_polledinput_FlushKeys(1);
-	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 404, 0};
+	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 424, 0};
 	bbOnDebugEnterStm(&__stmt_2);
 	while(bbt_retVal==0){
 		struct BBDebugScope __scope = {
@@ -2214,19 +2322,19 @@ BBINT _m_tank_attack_DrawEndGame(struct _m_tank_attack_TTank_obj* bbt_p1,struct 
 			}
 		};
 		bbOnDebugEnterScope(&__scope);
-		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 405, 0};
+		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 425, 0};
 		bbOnDebugEnterStm(&__stmt_0);
 		brl_max2d_Cls();
-		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 406, 0};
+		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 426, 0};
 		bbOnDebugEnterStm(&__stmt_1);
 		brl_max2d_SetColor(255,255,255);
-		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 407, 0};
+		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 427, 0};
 		bbOnDebugEnterStm(&__stmt_2);
 		_m_tank_attack_PrintMessage(&_s17,400,32,1);
-		struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 409, 0};
+		struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 429, 0};
 		bbOnDebugEnterStm(&__stmt_3);
 		brl_max2d_SetColor(255,255,255);
-		struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 410, 0};
+		struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 430, 0};
 		bbOnDebugEnterStm(&__stmt_4);
 		if(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_p1))->__m_tank_attack_ttank_score ==((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_p2))->__m_tank_attack_ttank_score ){
 			struct BBDebugScope __scope = {
@@ -2237,7 +2345,7 @@ BBINT _m_tank_attack_DrawEndGame(struct _m_tank_attack_TTank_obj* bbt_p1,struct 
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 411, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 431, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			_m_tank_attack_PrintMessage(&_s33,400,228,1);
 			bbOnDebugLeaveScope();
@@ -2250,7 +2358,7 @@ BBINT _m_tank_attack_DrawEndGame(struct _m_tank_attack_TTank_obj* bbt_p1,struct 
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 412, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 432, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			if(((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_p1))->__m_tank_attack_ttank_score >((struct _m_tank_attack_TTank_obj*)bbNullObjectTest(bbt_p2))->__m_tank_attack_ttank_score ){
 				struct BBDebugScope __scope = {
@@ -2261,7 +2369,7 @@ BBINT _m_tank_attack_DrawEndGame(struct _m_tank_attack_TTank_obj* bbt_p1,struct 
 					}
 				};
 				bbOnDebugEnterScope(&__scope);
-				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 413, 0};
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 433, 0};
 				bbOnDebugEnterStm(&__stmt_0);
 				_m_tank_attack_PrintMessage(&_s34,400,228,1);
 				bbOnDebugLeaveScope();
@@ -2274,26 +2382,26 @@ BBINT _m_tank_attack_DrawEndGame(struct _m_tank_attack_TTank_obj* bbt_p1,struct 
 					}
 				};
 				bbOnDebugEnterScope(&__scope);
-				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 415, 0};
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 435, 0};
 				bbOnDebugEnterStm(&__stmt_0);
 				_m_tank_attack_PrintMessage(&_s35,400,228,1);
 				bbOnDebugLeaveScope();
 			}
 			bbOnDebugLeaveScope();
 		}
-		struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 418, 0};
+		struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 438, 0};
 		bbOnDebugEnterStm(&__stmt_5);
 		brl_max2d_SetColor(255,0,0);
-		struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 419, 0};
+		struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 439, 0};
 		bbOnDebugEnterStm(&__stmt_6);
 		_m_tank_attack_PrintMessage(&_s36,400,492,1);
-		struct BBDebugStm __stmt_7 = {0xc6ae64f32ad8815b, 420, 0};
+		struct BBDebugStm __stmt_7 = {0xc6ae64f32ad8815b, 440, 0};
 		bbOnDebugEnterStm(&__stmt_7);
 		_m_tank_attack_PrintMessage(&_s25,400,524,1);
-		struct BBDebugStm __stmt_8 = {0xc6ae64f32ad8815b, 421, 0};
+		struct BBDebugStm __stmt_8 = {0xc6ae64f32ad8815b, 441, 0};
 		bbOnDebugEnterStm(&__stmt_8);
 		brl_graphics_Flip(-1);
-		struct BBDebugStm __stmt_9 = {0xc6ae64f32ad8815b, 422, 0};
+		struct BBDebugStm __stmt_9 = {0xc6ae64f32ad8815b, 442, 0};
 		bbOnDebugEnterStm(&__stmt_9);
 		if(brl_polledinput_KeyDown(80)!=0){
 			struct BBDebugScope __scope = {
@@ -2304,7 +2412,7 @@ BBINT _m_tank_attack_DrawEndGame(struct _m_tank_attack_TTank_obj* bbt_p1,struct 
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 423, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 443, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			bbt_retVal=1;
 			bbOnDebugLeaveScope();
@@ -2317,7 +2425,7 @@ BBINT _m_tank_attack_DrawEndGame(struct _m_tank_attack_TTank_obj* bbt_p1,struct 
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 424, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 444, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			if(brl_polledinput_KeyDown(27)!=0){
 				struct BBDebugScope __scope = {
@@ -2328,7 +2436,7 @@ BBINT _m_tank_attack_DrawEndGame(struct _m_tank_attack_TTank_obj* bbt_p1,struct 
 					}
 				};
 				bbOnDebugEnterScope(&__scope);
-				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 425, 0};
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 445, 0};
 				bbOnDebugEnterStm(&__stmt_0);
 				bbt_retVal=2;
 				bbOnDebugLeaveScope();
@@ -2337,10 +2445,10 @@ BBINT _m_tank_attack_DrawEndGame(struct _m_tank_attack_TTank_obj* bbt_p1,struct 
 		}
 		bbOnDebugLeaveScope();
 	}
-	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 428, 0};
+	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 448, 0};
 	bbOnDebugEnterStm(&__stmt_3);
 	brl_polledinput_FlushKeys(1);
-	struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 429, 0};
+	struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 449, 0};
 	bbOnDebugEnterStm(&__stmt_4);
 	bbOnDebugLeaveScope();
 	return bbt_retVal;
@@ -2409,31 +2517,31 @@ BBINT _m_tank_attack_MainGameLoop(BBINT bbt_currentLevel){
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 301, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 321, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	bbt_roundTime=bbMilliSecs();
-	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 302, 0};
+	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 322, 0};
 	bbOnDebugEnterStm(&__stmt_1);
 	bbt_countDown=99;
-	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 303, 0};
+	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 323, 0};
 	bbOnDebugEnterStm(&__stmt_2);
 	bbt_mapData=(struct brl_linkedlist_TList_obj*)_m_tank_attack_LoadMap(bbt_currentLevel);
-	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 304, 0};
+	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 324, 0};
 	bbOnDebugEnterStm(&__stmt_3);
 	bbt_tankList=(struct brl_linkedlist_TList_obj*)brl_linkedlist_CreateList();
-	struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 305, 0};
+	struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 325, 0};
 	bbOnDebugEnterStm(&__stmt_4);
-	bbt_player1=(struct _m_tank_attack_TTank_obj*)_m_tank_attack_TTank_Create_TTTank_iiiiiiiii(64,300,255,0,0,65,68,87,83);
-	struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 306, 0};
+	bbt_player1=(struct _m_tank_attack_TTank_obj*)_m_tank_attack_TTank_Create_TTTank_iiiiiiiiii(64,300,255,0,0,65,68,87,69,83);
+	struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 326, 0};
 	bbOnDebugEnterStm(&__stmt_5);
-	bbt_player2=(struct _m_tank_attack_TTank_obj*)_m_tank_attack_TTank_Create_TTTank_iiiiiiiii(704,300,0,0,255,37,39,38,77);
-	struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 307, 0};
+	bbt_player2=(struct _m_tank_attack_TTank_obj*)_m_tank_attack_TTank_Create_TTTank_iiiiiiiiii(704,300,0,0,255,37,39,38,77,40);
+	struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 327, 0};
 	bbOnDebugEnterStm(&__stmt_6);
 	brl_linkedlist_ListAddLast((struct brl_linkedlist_TList_obj*)bbt_tankList,(BBOBJECT)bbt_player1);
-	struct BBDebugStm __stmt_7 = {0xc6ae64f32ad8815b, 308, 0};
+	struct BBDebugStm __stmt_7 = {0xc6ae64f32ad8815b, 328, 0};
 	bbOnDebugEnterStm(&__stmt_7);
 	brl_linkedlist_ListAddLast((struct brl_linkedlist_TList_obj*)bbt_tankList,(BBOBJECT)bbt_player2);
-	struct BBDebugStm __stmt_8 = {0xc6ae64f32ad8815b, 310, 0};
+	struct BBDebugStm __stmt_8 = {0xc6ae64f32ad8815b, 330, 0};
 	bbOnDebugEnterStm(&__stmt_8);
 	while(bbt_countDown>0){
 		BBINT bbt_tankVictor=0;
@@ -2451,16 +2559,16 @@ BBINT _m_tank_attack_MainGameLoop(BBINT bbt_currentLevel){
 			}
 		};
 		bbOnDebugEnterScope(&__scope);
-		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 311, 0};
+		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 331, 0};
 		bbOnDebugEnterStm(&__stmt_0);
 		bbt_countDown=_m_tank_attack_UpdateCountDown((&bbt_roundTime),bbt_countDown);
-		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 312, 0};
+		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 332, 0};
 		bbOnDebugEnterStm(&__stmt_1);
 		_m_tank_attack_UpdateTanks((struct brl_linkedlist_TList_obj*)bbt_mapData,(struct brl_linkedlist_TList_obj*)bbt_tankList);
-		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 313, 0};
+		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 333, 0};
 		bbOnDebugEnterStm(&__stmt_2);
 		bbt_tankVictor=_m_tank_attack_UpdateBullets((struct brl_linkedlist_TList_obj*)bbt_mapData,(struct brl_linkedlist_TList_obj*)bbt_tankList);
-		struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 314, 0};
+		struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 334, 0};
 		bbOnDebugEnterStm(&__stmt_3);
 		if(bbt_tankVictor>-1){
 			struct BBDebugScope __scope = {
@@ -2471,32 +2579,32 @@ BBINT _m_tank_attack_MainGameLoop(BBINT bbt_currentLevel){
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 315, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 335, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			_m_tank_attack_ResetGame((struct brl_linkedlist_TList_obj*)bbt_tankList,bbt_tankVictor);
 			bbOnDebugLeaveScope();
 		}
-		struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 317, 0};
+		struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 337, 0};
 		bbOnDebugEnterStm(&__stmt_4);
 		brl_max2d_Cls();
-		struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 318, 0};
+		struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 338, 0};
 		bbOnDebugEnterStm(&__stmt_5);
 		_m_tank_attack_DrawMap((struct brl_linkedlist_TList_obj*)bbt_mapData);
-		struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 319, 0};
+		struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 339, 0};
 		bbOnDebugEnterStm(&__stmt_6);
 		_m_tank_attack_DrawTanks((struct brl_linkedlist_TList_obj*)bbt_tankList);
-		struct BBDebugStm __stmt_7 = {0xc6ae64f32ad8815b, 320, 0};
+		struct BBDebugStm __stmt_7 = {0xc6ae64f32ad8815b, 340, 0};
 		bbOnDebugEnterStm(&__stmt_7);
 		_m_tank_attack_DrawInformation((struct brl_linkedlist_TList_obj*)bbt_tankList,bbt_countDown);
-		struct BBDebugStm __stmt_8 = {0xc6ae64f32ad8815b, 321, 0};
+		struct BBDebugStm __stmt_8 = {0xc6ae64f32ad8815b, 341, 0};
 		bbOnDebugEnterStm(&__stmt_8);
 		brl_graphics_Flip(-1);
 		bbOnDebugLeaveScope();
 	}
-	struct BBDebugStm __stmt_9 = {0xc6ae64f32ad8815b, 325, 0};
+	struct BBDebugStm __stmt_9 = {0xc6ae64f32ad8815b, 345, 0};
 	bbOnDebugEnterStm(&__stmt_9);
 	bbt_result=0;
-	struct BBDebugStm __stmt_10 = {0xc6ae64f32ad8815b, 326, 0};
+	struct BBDebugStm __stmt_10 = {0xc6ae64f32ad8815b, 346, 0};
 	bbOnDebugEnterStm(&__stmt_10);
 	while(bbt_result==0){
 		struct BBDebugScope __scope = {
@@ -2507,12 +2615,12 @@ BBINT _m_tank_attack_MainGameLoop(BBINT bbt_currentLevel){
 			}
 		};
 		bbOnDebugEnterScope(&__scope);
-		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 327, 0};
+		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 347, 0};
 		bbOnDebugEnterStm(&__stmt_0);
 		bbt_result=_m_tank_attack_DrawEndGame((struct _m_tank_attack_TTank_obj*)bbt_player1,(struct _m_tank_attack_TTank_obj*)bbt_player2);
 		bbOnDebugLeaveScope();
 	}
-	struct BBDebugStm __stmt_11 = {0xc6ae64f32ad8815b, 329, 0};
+	struct BBDebugStm __stmt_11 = {0xc6ae64f32ad8815b, 349, 0};
 	bbOnDebugEnterStm(&__stmt_11);
 	bbOnDebugLeaveScope();
 	return bbt_result;
@@ -2533,10 +2641,10 @@ BBINT _m_tank_attack_InstructionsPage(){
 		}
 	};
 	bbOnDebugEnterScope(&__scope);
-	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 371, 0};
+	struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 391, 0};
 	bbOnDebugEnterStm(&__stmt_0);
 	bbt_retVal=1;
-	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 373, 0};
+	struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 393, 0};
 	bbOnDebugEnterStm(&__stmt_1);
 	while(bbt_retVal==1){
 		struct BBDebugScope __scope = {
@@ -2547,55 +2655,55 @@ BBINT _m_tank_attack_InstructionsPage(){
 			}
 		};
 		bbOnDebugEnterScope(&__scope);
-		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 374, 0};
+		struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 394, 0};
 		bbOnDebugEnterStm(&__stmt_0);
 		brl_max2d_Cls();
-		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 375, 0};
+		struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 395, 0};
 		bbOnDebugEnterStm(&__stmt_1);
 		brl_max2d_SetColor(255,255,255);
-		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 376, 0};
+		struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 396, 0};
 		bbOnDebugEnterStm(&__stmt_2);
 		_m_tank_attack_PrintMessage(&_s17,400,32,1);
-		struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 377, 0};
+		struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 397, 0};
 		bbOnDebugEnterStm(&__stmt_3);
 		brl_max2d_SetColor(255,192,0);
-		struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 378, 0};
+		struct BBDebugStm __stmt_4 = {0xc6ae64f32ad8815b, 398, 0};
 		bbOnDebugEnterStm(&__stmt_4);
 		_m_tank_attack_PrintMessage(&_s18,400,96,1);
-		struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 379, 0};
+		struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 399, 0};
 		bbOnDebugEnterStm(&__stmt_5);
 		brl_max2d_SetColor(255,255,255);
-		struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 380, 0};
+		struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 400, 0};
 		bbOnDebugEnterStm(&__stmt_6);
 		_m_tank_attack_PrintMessage(&_s26,400,228,1);
-		struct BBDebugStm __stmt_7 = {0xc6ae64f32ad8815b, 381, 0};
+		struct BBDebugStm __stmt_7 = {0xc6ae64f32ad8815b, 401, 0};
 		bbOnDebugEnterStm(&__stmt_7);
 		_m_tank_attack_PrintMessage(&_s27,400,248,1);
-		struct BBDebugStm __stmt_8 = {0xc6ae64f32ad8815b, 382, 0};
+		struct BBDebugStm __stmt_8 = {0xc6ae64f32ad8815b, 402, 0};
 		bbOnDebugEnterStm(&__stmt_8);
 		_m_tank_attack_PrintMessage(&_s28,400,268,1);
-		struct BBDebugStm __stmt_9 = {0xc6ae64f32ad8815b, 383, 0};
+		struct BBDebugStm __stmt_9 = {0xc6ae64f32ad8815b, 403, 0};
 		bbOnDebugEnterStm(&__stmt_9);
 		_m_tank_attack_PrintMessage(&_s29,400,308,1);
-		struct BBDebugStm __stmt_10 = {0xc6ae64f32ad8815b, 384, 0};
+		struct BBDebugStm __stmt_10 = {0xc6ae64f32ad8815b, 404, 0};
 		bbOnDebugEnterStm(&__stmt_10);
 		_m_tank_attack_PrintMessage(&_s30,400,328,1);
-		struct BBDebugStm __stmt_11 = {0xc6ae64f32ad8815b, 385, 0};
+		struct BBDebugStm __stmt_11 = {0xc6ae64f32ad8815b, 405, 0};
 		bbOnDebugEnterStm(&__stmt_11);
 		_m_tank_attack_PrintMessage(&_s31,400,348,1);
-		struct BBDebugStm __stmt_12 = {0xc6ae64f32ad8815b, 388, 0};
+		struct BBDebugStm __stmt_12 = {0xc6ae64f32ad8815b, 408, 0};
 		bbOnDebugEnterStm(&__stmt_12);
 		brl_max2d_SetColor(255,0,0);
-		struct BBDebugStm __stmt_13 = {0xc6ae64f32ad8815b, 389, 0};
+		struct BBDebugStm __stmt_13 = {0xc6ae64f32ad8815b, 409, 0};
 		bbOnDebugEnterStm(&__stmt_13);
 		_m_tank_attack_PrintMessage(&_s32,400,492,1);
-		struct BBDebugStm __stmt_14 = {0xc6ae64f32ad8815b, 390, 0};
+		struct BBDebugStm __stmt_14 = {0xc6ae64f32ad8815b, 410, 0};
 		bbOnDebugEnterStm(&__stmt_14);
 		_m_tank_attack_PrintMessage(&_s25,400,524,1);
-		struct BBDebugStm __stmt_15 = {0xc6ae64f32ad8815b, 392, 0};
+		struct BBDebugStm __stmt_15 = {0xc6ae64f32ad8815b, 412, 0};
 		bbOnDebugEnterStm(&__stmt_15);
 		brl_graphics_Flip(-1);
-		struct BBDebugStm __stmt_16 = {0xc6ae64f32ad8815b, 393, 0};
+		struct BBDebugStm __stmt_16 = {0xc6ae64f32ad8815b, 413, 0};
 		bbOnDebugEnterStm(&__stmt_16);
 		if(brl_polledinput_KeyDown(13)!=0){
 			struct BBDebugScope __scope = {
@@ -2606,17 +2714,17 @@ BBINT _m_tank_attack_InstructionsPage(){
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 394, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 414, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			bbt_retVal=0;
 			bbOnDebugLeaveScope();
 		}
 		bbOnDebugLeaveScope();
 	}
-	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 397, 0};
+	struct BBDebugStm __stmt_2 = {0xc6ae64f32ad8815b, 417, 0};
 	bbOnDebugEnterStm(&__stmt_2);
 	brl_polledinput_FlushKeys(1);
-	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 398, 0};
+	struct BBDebugStm __stmt_3 = {0xc6ae64f32ad8815b, 418, 0};
 	bbOnDebugEnterStm(&__stmt_3);
 	bbOnDebugLeaveScope();
 	return bbt_retVal;
@@ -2747,16 +2855,16 @@ int _bb_main(){
 		struct BBDebugStm __stmt_5 = {0xc6ae64f32ad8815b, 9, 0};
 		bbOnDebugEnterStm(&__stmt_5);
 		brl_max2d_MidHandleImage((struct brl_max2d_image_TImage_obj*)_m_tank_attack_bulletImage);
-		struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 432, 0};
+		struct BBDebugStm __stmt_6 = {0xc6ae64f32ad8815b, 452, 0};
 		bbOnDebugEnterStm(&__stmt_6);
 		bbt_state=0;
-		struct BBDebugStm __stmt_7 = {0xc6ae64f32ad8815b, 433, 0};
+		struct BBDebugStm __stmt_7 = {0xc6ae64f32ad8815b, 453, 0};
 		bbOnDebugEnterStm(&__stmt_7);
 		bbt_quit=0;
-		struct BBDebugStm __stmt_8 = {0xc6ae64f32ad8815b, 434, 0};
+		struct BBDebugStm __stmt_8 = {0xc6ae64f32ad8815b, 454, 0};
 		bbOnDebugEnterStm(&__stmt_8);
 		bbt_currentLevel=0;
-		struct BBDebugStm __stmt_9 = {0xc6ae64f32ad8815b, 445, 0};
+		struct BBDebugStm __stmt_9 = {0xc6ae64f32ad8815b, 465, 0};
 		bbOnDebugEnterStm(&__stmt_9);
 		while(!(bbt_quit!=0)){
 			struct BBDebugScope __scope = {
@@ -2767,10 +2875,10 @@ int _bb_main(){
 				}
 			};
 			bbOnDebugEnterScope(&__scope);
-			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 446, 0};
+			struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 466, 0};
 			bbOnDebugEnterStm(&__stmt_0);
 			BBINT bbt_=bbt_state;
-			struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 447, 0};
+			struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 467, 0};
 			bbOnDebugEnterStm(&__stmt_1);
 			if(bbt_==0){
 				struct BBDebugScope __scope = {
@@ -2781,10 +2889,10 @@ int _bb_main(){
 					}
 				};
 				bbOnDebugEnterScope(&__scope);
-				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 448, 0};
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 468, 0};
 				bbOnDebugEnterStm(&__stmt_0);
 				bbt_currentLevel=_m_tank_attack_DrawSplash();
-				struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 449, 0};
+				struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 469, 0};
 				bbOnDebugEnterStm(&__stmt_1);
 				if(bbt_currentLevel==99){
 					struct BBDebugScope __scope = {
@@ -2795,7 +2903,7 @@ int _bb_main(){
 						}
 					};
 					bbOnDebugEnterScope(&__scope);
-					struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 450, 0};
+					struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 470, 0};
 					bbOnDebugEnterStm(&__stmt_0);
 					bbt_quit=1;
 					bbOnDebugLeaveScope();
@@ -2808,7 +2916,7 @@ int _bb_main(){
 						}
 					};
 					bbOnDebugEnterScope(&__scope);
-					struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 451, 0};
+					struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 471, 0};
 					bbOnDebugEnterStm(&__stmt_0);
 					if(bbt_currentLevel==98){
 						struct BBDebugScope __scope = {
@@ -2819,7 +2927,7 @@ int _bb_main(){
 							}
 						};
 						bbOnDebugEnterScope(&__scope);
-						struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 453, 0};
+						struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 473, 0};
 						bbOnDebugEnterStm(&__stmt_0);
 						bbt_state=3;
 						bbOnDebugLeaveScope();
@@ -2832,7 +2940,7 @@ int _bb_main(){
 							}
 						};
 						bbOnDebugEnterScope(&__scope);
-						struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 455, 0};
+						struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 475, 0};
 						bbOnDebugEnterStm(&__stmt_0);
 						bbt_state=1;
 						bbOnDebugLeaveScope();
@@ -2849,7 +2957,7 @@ int _bb_main(){
 					}
 				};
 				bbOnDebugEnterScope(&__scope);
-				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 457, 0};
+				struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 477, 0};
 				bbOnDebugEnterStm(&__stmt_0);
 				if(bbt_==1){
 					struct BBDebugScope __scope = {
@@ -2860,10 +2968,10 @@ int _bb_main(){
 						}
 					};
 					bbOnDebugEnterScope(&__scope);
-					struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 458, 0};
+					struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 478, 0};
 					bbOnDebugEnterStm(&__stmt_0);
 					bbt_state=_m_tank_attack_MainGameLoop(bbt_currentLevel);
-					struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 459, 0};
+					struct BBDebugStm __stmt_1 = {0xc6ae64f32ad8815b, 479, 0};
 					bbOnDebugEnterStm(&__stmt_1);
 					if(bbt_state==2){
 						struct BBDebugScope __scope = {
@@ -2874,7 +2982,7 @@ int _bb_main(){
 							}
 						};
 						bbOnDebugEnterScope(&__scope);
-						struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 460, 0};
+						struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 480, 0};
 						bbOnDebugEnterStm(&__stmt_0);
 						bbt_quit=1;
 						bbOnDebugLeaveScope();
@@ -2889,7 +2997,7 @@ int _bb_main(){
 						}
 					};
 					bbOnDebugEnterScope(&__scope);
-					struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 462, 0};
+					struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 482, 0};
 					bbOnDebugEnterStm(&__stmt_0);
 					if(bbt_==3){
 						struct BBDebugScope __scope = {
@@ -2900,7 +3008,7 @@ int _bb_main(){
 							}
 						};
 						bbOnDebugEnterScope(&__scope);
-						struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 463, 0};
+						struct BBDebugStm __stmt_0 = {0xc6ae64f32ad8815b, 483, 0};
 						bbOnDebugEnterStm(&__stmt_0);
 						bbt_state=_m_tank_attack_InstructionsPage();
 						bbOnDebugLeaveScope();

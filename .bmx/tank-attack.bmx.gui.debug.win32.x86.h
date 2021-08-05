@@ -87,8 +87,8 @@ extern struct BBClass__m_tank_attack_TVector2 _m_tank_attack_TVector2;
 struct brl_linkedlist_TList_obj* _m_tank_attack_GetMapData(BBSTRING bbt_filename);
 struct brl_linkedlist_TList_obj* _m_tank_attack_LoadMap(BBINT bbt_mapID);
 void __m_tank_attack_TTank_New(struct _m_tank_attack_TTank_obj* o);
-typedef struct _m_tank_attack_TTank_obj* (*_m_tank_attack_TTank_Create_TTTank_iiiiiiiii_f)(BBINT,BBINT,BBINT,BBINT,BBINT,BBINT,BBINT,BBINT,BBINT);
-struct _m_tank_attack_TTank_obj* _m_tank_attack_TTank_Create_TTTank_iiiiiiiii(BBINT,BBINT,BBINT,BBINT,BBINT,BBINT,BBINT,BBINT,BBINT);
+typedef struct _m_tank_attack_TTank_obj* (*_m_tank_attack_TTank_Create_TTTank_iiiiiiiiii_f)(BBINT,BBINT,BBINT,BBINT,BBINT,BBINT,BBINT,BBINT,BBINT,BBINT);
+struct _m_tank_attack_TTank_obj* _m_tank_attack_TTank_Create_TTTank_iiiiiiiiii(BBINT,BBINT,BBINT,BBINT,BBINT,BBINT,BBINT,BBINT,BBINT,BBINT);
 struct BBClass__m_tank_attack_TTank {
 	BBClass*  super;
 	void      (*free)( BBObject *o );
@@ -104,7 +104,7 @@ struct BBClass__m_tank_attack_TTank {
 	unsigned int obj_size;
 	unsigned int instance_count;
 	unsigned int fields_offset;
-	_m_tank_attack_TTank_Create_TTTank_iiiiiiiii_f f_Create_TTTank_iiiiiiiii;
+	_m_tank_attack_TTank_Create_TTTank_iiiiiiiiii_f f_Create_TTTank_iiiiiiiiii;
 };
 
 struct _m_tank_attack_TTank_obj {
@@ -118,6 +118,7 @@ struct _m_tank_attack_TTank_obj {
 	BBINT __m_tank_attack_ttank_rotrightkey;
 	BBINT __m_tank_attack_ttank_rotleftkey;
 	BBINT __m_tank_attack_ttank_forwardkey;
+	BBINT __m_tank_attack_ttank_reversekey;
 	BBINT __m_tank_attack_ttank_firekey;
 	struct _m_tank_attack_TBullet_obj* __m_tank_attack_ttank_bullet;
 	BBINT __m_tank_attack_ttank_score;

@@ -120,19 +120,20 @@ static BBString _s36={
 };
 static BBString _s28={
 	&bbStringClass,
-	0xd6706d6812732d85,
+	0xe7ea8f12183b7405,
 	33,
 	{80,108,97,121,101,114,32,111,110,101,32,115,104,111,111,116,115
-	,32,119,105,116,104,32,116,104,101,32,83,32,107,101,121,46
+	,32,119,105,116,104,32,116,104,101,32,69,32,107,101,121,46
 }
 };
 static BBString _s26={
 	&bbStringClass,
-	0xf0497909d5dcef94,
-	43,
+	0x3c28fb3a17de65c1,
+	64,
 	{80,108,97,121,101,114,32,111,110,101,32,117,115,101,115,32,116
 	,104,101,32,87,32,107,101,121,32,116,111,32,100,114,105,118
-	,101,32,102,111,114,119,97,114,100,44}
+	,101,32,102,111,114,119,97,114,100,44,32,83,32,116,111,32
+	,100,114,105,118,101,32,98,97,99,107,119,97,114,100,44}
 };
 static BBString _s31={
 	&bbStringClass,
@@ -144,12 +145,14 @@ static BBString _s31={
 };
 static BBString _s29={
 	&bbStringClass,
-	0xe82eee0cd174e665,
-	50,
+	0x4716fb4a67adcf15,
+	88,
 	{80,108,97,121,101,114,32,116,119,111,32,117,115,101,115,32,116
-	,104,101,32,85,80,32,65,114,114,111,119,32,107,101,121,32
+	,104,101,32,85,80,32,65,82,82,79,87,32,107,101,121,32
 	,116,111,32,100,114,105,118,101,32,102,111,114,119,97,114,100
-	,44}
+	,44,32,116,104,101,32,68,79,87,78,32,65,82,82,79,87
+	,32,107,101,121,32,116,111,32,100,114,105,118,101,32,98,97
+	,99,107,119,97,114,100,44}
 };
 static BBString _s22={
 	&bbStringClass,
@@ -267,7 +270,7 @@ static BBString _s30={
 	,82,79,87,32,107,101,121,32,116,111,32,116,117,114,110,32
 	,114,105,103,104,116,46}
 };
-struct BBDebugScope_14{int kind; const char *name; BBDebugDecl decls[15]; };
+struct BBDebugScope_15{int kind; const char *name; BBDebugDecl decls[16]; };
 struct BBDebugScope_3{int kind; const char *name; BBDebugDecl decls[4]; };
 struct BBDebugScope_5{int kind; const char *name; BBDebugDecl decls[6]; };
 struct brl_max2d_image_TImage_obj* _m_tank_attack_brick=(struct brl_max2d_image_TImage_obj*)(&bbNullObject);
@@ -413,11 +416,12 @@ void __m_tank_attack_TTank_New(struct _m_tank_attack_TTank_obj* o) {
 	o->__m_tank_attack_ttank_rotrightkey = 0;
 	o->__m_tank_attack_ttank_rotleftkey = 0;
 	o->__m_tank_attack_ttank_forwardkey = 0;
+	o->__m_tank_attack_ttank_reversekey = 0;
 	o->__m_tank_attack_ttank_firekey = 0;
 	o->__m_tank_attack_ttank_bullet = (struct _m_tank_attack_TBullet_obj*)(&bbNullObject);
 	o->__m_tank_attack_ttank_score = 0;
 }
-struct _m_tank_attack_TTank_obj* _m_tank_attack_TTank_Create_TTTank_iiiiiiiii(BBINT bbt_x,BBINT bbt_y,BBINT bbt_r,BBINT bbt_g,BBINT bbt_b,BBINT bbt_rotLeft,BBINT bbt_rotRight,BBINT bbt_forward,BBINT bbt_fire){
+struct _m_tank_attack_TTank_obj* _m_tank_attack_TTank_Create_TTTank_iiiiiiiiii(BBINT bbt_x,BBINT bbt_y,BBINT bbt_r,BBINT bbt_g,BBINT bbt_b,BBINT bbt_rotLeft,BBINT bbt_rotRight,BBINT bbt_forward,BBINT bbt_fire,BBINT bbt_reverse){
 	struct _m_tank_attack_TTank_obj* bbt_tank=(struct _m_tank_attack_TTank_obj*)(struct _m_tank_attack_TTank_obj*)bbObjectNew((BBClass *)&_m_tank_attack_TTank);
 	bbt_tank->__m_tank_attack_ttank_x =((BBFLOAT)bbt_x);
 	bbt_tank->__m_tank_attack_ttank_y =((BBFLOAT)bbt_y);
@@ -427,6 +431,7 @@ struct _m_tank_attack_TTank_obj* _m_tank_attack_TTank_Create_TTTank_iiiiiiiii(BB
 	bbt_tank->__m_tank_attack_ttank_rotrightkey =bbt_rotRight;
 	bbt_tank->__m_tank_attack_ttank_rotleftkey =bbt_rotLeft;
 	bbt_tank->__m_tank_attack_ttank_forwardkey =bbt_forward;
+	bbt_tank->__m_tank_attack_ttank_reversekey =bbt_reverse;
 	bbt_tank->__m_tank_attack_ttank_firekey =bbt_fire;
 	bbt_tank->__m_tank_attack_ttank_bullet =(struct _m_tank_attack_TBullet_obj*)(struct _m_tank_attack_TBullet_obj*)bbObjectNew((BBClass *)&_m_tank_attack_TBullet);
 	bbt_tank->__m_tank_attack_ttank_bullet ->__m_tank_attack_tbullet_isalive =0;
@@ -438,7 +443,7 @@ struct _m_tank_attack_TTank_obj* _m_tank_attack_TTank_Create_TTTank_iiiiiiiii(BB
 	bbt_tank->__m_tank_attack_ttank_bullet ->__m_tank_attack_tbullet_speed ->__m_tank_attack_tvector2_y =0.000000000f;
 	return (struct _m_tank_attack_TTank_obj*)bbt_tank;
 }
-struct BBDebugScope_14 _m_tank_attack_TTank_scope ={
+struct BBDebugScope_15 _m_tank_attack_TTank_scope ={
 	BBDEBUGSCOPE_USERTYPE,
 	"TTank",
 	{
@@ -498,6 +503,12 @@ struct BBDebugScope_14 _m_tank_attack_TTank_scope ={
 		},
 		{
 			BBDEBUGDECL_FIELD,
+			"reverseKey",
+			"i",
+			.field_offset=offsetof(struct _m_tank_attack_TTank_obj,__m_tank_attack_ttank_reversekey)
+		},
+		{
+			BBDEBUGDECL_FIELD,
 			"fireKey",
 			"i",
 			.field_offset=offsetof(struct _m_tank_attack_TTank_obj,__m_tank_attack_ttank_firekey)
@@ -523,8 +534,8 @@ struct BBDebugScope_14 _m_tank_attack_TTank_scope ={
 		{
 			BBDEBUGDECL_TYPEFUNCTION,
 			"Create",
-			"(i,i,i,i,i,i,i,i,i):TTank",
-			.var_address=(void*)&_m_tank_attack_TTank_Create_TTTank_iiiiiiiii
+			"(i,i,i,i,i,i,i,i,i,i):TTank",
+			.var_address=(void*)&_m_tank_attack_TTank_Create_TTTank_iiiiiiiiii
 		},
 		BBDEBUGDECL_END
 	}
@@ -544,7 +555,7 @@ struct BBClass__m_tank_attack_TTank _m_tank_attack_TTank={
 	offsetof(struct _m_tank_attack_TTank_obj,__m_tank_attack_ttank_score) - offsetof(struct _m_tank_attack_TTank_obj,__m_tank_attack_ttank_x) + sizeof(BBINT)
 	,0
 	,offsetof(struct _m_tank_attack_TTank_obj,__m_tank_attack_ttank_x)
-	,_m_tank_attack_TTank_Create_TTTank_iiiiiiiii
+	,_m_tank_attack_TTank_Create_TTTank_iiiiiiiiii
 };
 
 void __m_tank_attack_TBullet_New(struct _m_tank_attack_TBullet_obj* o) {
@@ -681,6 +692,21 @@ BBINT _m_tank_attack_UpdateTanks(struct brl_linkedlist_TList_obj* bbt_mapData,st
 			}
 			if((bbt_y2>=32.0000000f) && (bbt_y2<=568.000000f)){
 				bbt_t->__m_tank_attack_ttank_y =bbt_y2;
+			}
+		}
+		if(brl_polledinput_KeyDown(bbt_t->__m_tank_attack_ttank_reversekey )!=0){
+			BBFLOAT bbt_x3=bbt_t->__m_tank_attack_ttank_x ;
+			BBFLOAT bbt_y3=bbt_t->__m_tank_attack_ttank_y ;
+			bbt_x3=((BBFLOAT)(((BBDOUBLE)bbt_x3)-(1.57000005*bbSin((double)((BBDOUBLE)bbt_t->__m_tank_attack_ttank_rotation )))));
+			bbt_y3=((BBFLOAT)(((BBDOUBLE)bbt_y3)+(1.57000005*bbCos((double)((BBDOUBLE)bbt_t->__m_tank_attack_ttank_rotation )))));
+			if(_m_tank_attack_IsCrashWithBricks((struct brl_linkedlist_TList_obj*)bbt_mapData,(struct brl_max2d_image_TImage_obj*)_m_tank_attack_tankImage,bbt_x3,bbt_y3)!=0){
+				continue;
+			}
+			if((bbt_x3>=32.0000000f) && (bbt_x3<=768.000000f)){
+				bbt_t->__m_tank_attack_ttank_x =bbt_x3;
+			}
+			if((bbt_y3>=32.0000000f) && (bbt_y3<=568.000000f)){
+				bbt_t->__m_tank_attack_ttank_y =bbt_y3;
 			}
 		}
 	}
@@ -834,8 +860,8 @@ BBINT _m_tank_attack_MainGameLoop(BBINT bbt_currentLevel){
 	BBINT bbt_countDown=99;
 	struct brl_linkedlist_TList_obj* bbt_mapData=(struct brl_linkedlist_TList_obj*)_m_tank_attack_LoadMap(bbt_currentLevel);
 	struct brl_linkedlist_TList_obj* bbt_tankList=(struct brl_linkedlist_TList_obj*)brl_linkedlist_CreateList();
-	struct _m_tank_attack_TTank_obj* bbt_player1=(struct _m_tank_attack_TTank_obj*)_m_tank_attack_TTank_Create_TTTank_iiiiiiiii(64,300,255,0,0,65,68,87,83);
-	struct _m_tank_attack_TTank_obj* bbt_player2=(struct _m_tank_attack_TTank_obj*)_m_tank_attack_TTank_Create_TTTank_iiiiiiiii(704,300,0,0,255,37,39,38,77);
+	struct _m_tank_attack_TTank_obj* bbt_player1=(struct _m_tank_attack_TTank_obj*)_m_tank_attack_TTank_Create_TTTank_iiiiiiiiii(64,300,255,0,0,65,68,87,69,83);
+	struct _m_tank_attack_TTank_obj* bbt_player2=(struct _m_tank_attack_TTank_obj*)_m_tank_attack_TTank_Create_TTTank_iiiiiiiiii(704,300,0,0,255,37,39,38,77,40);
 	brl_linkedlist_ListAddLast((struct brl_linkedlist_TList_obj*)bbt_tankList,(BBOBJECT)bbt_player1);
 	brl_linkedlist_ListAddLast((struct brl_linkedlist_TList_obj*)bbt_tankList,(BBOBJECT)bbt_player2);
 	while(bbt_countDown>0){

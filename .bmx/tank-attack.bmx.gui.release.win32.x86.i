@@ -63,11 +63,12 @@ TTank^Object{
 .rotRightKey%&
 .rotLeftKey%&
 .forwardKey%&
+.reverseKey%&
 .fireKey%&
 .Bullet:TBullet&
 .Score%&
 -New()="__m_tank_attack_TTank_New"
-+Create:TTank(x%,y%,r%,g%,b%,rotLeft%,rotRight%,forward%,fire%)="_m_tank_attack_TTank_Create_TTTank_iiiiiiiii"
++Create:TTank(x%,y%,r%,g%,b%,rotLeft%,rotRight%,forward%,fire%,reverse%)="_m_tank_attack_TTank_Create_TTTank_iiiiiiiiii"
 }="_m_tank_attack_TTank"
 TBullet^Object{
 .Location:TVector2&
